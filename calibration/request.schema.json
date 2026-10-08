@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExplainRequestTask11",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "selected_text": {
+      "type": "string"
+    },
+    "context": {
+      "type": "string"
+    },
+    "book_title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "selected_text",
+    "context"
+  ]
+}
