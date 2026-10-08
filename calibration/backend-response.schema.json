@@ -1,13 +1,32 @@
 {
-  "$schema":"https://json-schema.org/draft/2020-12/schema",
-  "title":"ExplainResponseCalibration",
-  "type":"object",
-  "additionalProperties":false,
-  "properties":{
-    "term":{"type":"string","minLength":1},
-    "definition":{"type":"string","minLength":1},
-    "explanation":{"type":"string","minLength":1},
-    "examples":{"type":"array","items":{"type":"string","minLength":1},"minItems":2,"maxItems":2}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExplainResponseTask11",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "translation": {
+      "type": "string"
+    },
+    "context_meaning": {
+      "type": "string"
+    },
+    "slang_or_etymology": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "image_prompt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
   },
-  "required":["term","definition","explanation","examples"]
+  "required": [
+    "translation",
+    "context_meaning",
+    "slang_or_etymology",
+    "image_prompt"
+  ]
 }

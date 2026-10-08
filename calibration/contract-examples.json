@@ -1,0 +1,15 @@
+{
+  "request": {
+    "selected_text": "spill the beans",
+    "context": "Mara promised to keep the engagement secret. Her sister saw the ring and asked her to spill the beans."
+  },
+  "success": {
+    "translation": "Раскрыть секрет.",
+    "context_meaning": "Сестра просит Мару рассказать о помолвке. Упоминание обещания сохранить тайну показывает переносный смысл выражения.",
+    "slang_or_etymology": null,
+    "image_prompt": "Two sisters talking quietly after one notices an engagement ring."
+  },
+  "error": {
+    "error": "Не удалось получить разбор текста. Попробуйте позже."
+  }
+}

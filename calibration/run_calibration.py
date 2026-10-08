@@ -27,40 +27,45 @@ def strict_json(raw):
     return json.loads(raw, object_pairs_hook=pairs, parse_constant=reject)
 
 
-def validate(value, case, schema):
+def validate_schema(value, schema):
     if not isinstance(value, dict):
-        raise ValueError("Output must be a JSON object, not a string/list")
-    if set(value) != set(schema["required"]):
-        missing = sorted(set(schema["required"]) - set(value))
-        extra = sorted(set(value) - set(schema["required"]))
-        raise ValueError(f"Missing keys: {missing}; unexpected keys: {extra}")
-    for name, spec in schema["properties"].items():
-        field = value[name]
-        if spec["type"] == "string":
-            if not isinstance(field, str) or (spec.get("minLength") and not field.strip()):
-                raise ValueError(f"Invalid string: {name}")
-            if "enum" in spec and field not in spec["enum"]:
-                raise ValueError(f"Invalid enum: {name}")
-        elif spec["type"] == "array":
-            if not isinstance(field, list) or any(not isinstance(x, str) or not x.strip() for x in field):
-                raise ValueError(f"Invalid string array: {name}")
-            if not spec.get("minItems", 0) <= len(field) <= spec["maxItems"]:
-                raise ValueError(f"Invalid array length: {name}")
-    if value["term"] != case["selected_text"]:
-        raise ValueError("term must exactly match selection")
-    if any(quote not in case["context"] for quote in value.get("context_evidence", [])):
-        raise ValueError("Evidence must be exact context substrings")
-    if "uncertainty" in value and not case["context"] and not value["uncertainty"].strip():
-        raise ValueError("Missing uncertainty for empty context")
-    if value.get("expression_type") == "uncertain" and not value["uncertainty"].strip():
-        raise ValueError("Missing uncertainty")
+        raise ValueError("Output must be a JSON object")
+    missing = set(schema["required"]) - set(value)
+    extra = set(value) - set(schema["properties"])
+    if missing or (extra and not schema.get("additionalProperties", True)):
+        raise ValueError(f"Missing keys: {sorted(missing)}; unexpected keys: {sorted(extra)}")
+    for name, field in value.items():
+        spec = schema["properties"].get(name)
+        if spec is None:
+            continue
+        types = spec["type"] if isinstance(spec["type"], list) else [spec["type"]]
+        if field is None and "null" in types:
+            continue
+        if not isinstance(field, str) or "string" not in types:
+            raise ValueError(f"Invalid type: {name}")
+        if len(field) < spec.get("minLength", 0):
+            raise ValueError(f"String too short: {name}")
+
+
+def validate(value, case, schema):
+    validate_schema(value, schema)
+    # Contract permits strings. Reject unusable output locally as an
+    # additional acceptance policy, without claiming it is in task #11.
+    for field in ("translation", "context_meaning"):
+        if not value[field].strip():
+            raise ValueError(f"Empty analysis: {field}")
+    for field in ("slang_or_etymology", "image_prompt"):
+        if isinstance(value[field], str) and value[field].strip().lower() in ("null", "none", ""):
+            raise ValueError(f"Use JSON null, not a placeholder string: {field}")
+    if not case["context"] and value["image_prompt"] is not None:
+        raise ValueError("image_prompt must be null without context")
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--env-file", type=Path, required=True)
-    parser.add_argument("--prompt", default="prompts/literary-analysis-v5.txt")
-    parser.add_argument("--output", default="calibration/results-new.json")
+    parser.add_argument("--prompt", default="prompts/literary-analysis-task11.txt")
+    parser.add_argument("--output", default="calibration/results-task11-new.json")
     parser.add_argument("--limit", type=int)
     parser.add_argument("--model", default="GigaChat-2-Max", help="Does not modify .env")
     parser.add_argument("--schema", default="calibration/backend-response.schema.json")
@@ -87,11 +92,13 @@ def main():
               "prompt_sha256": hashlib.sha256(prompt.encode()).hexdigest(),
               "schema_file": args.schema, "structured_output": args.structured, "temperature": 0.1,
               "cases": []}
+    request_schema = json.loads((ROOT / "calibration/request.schema.json").read_text(encoding="utf-8"))
     output = ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
     for case in cases:
-        entry = {"id": case["id"], "input": {k: case[k] for k in ("selected_text", "context")},
+        entry = {"id": case["id"], "input": {k: case[k] for k in ("selected_text", "context", "book_title") if k in case},
                  "expected": case["expected"], "attempts": [], "accepted": False}
+        validate_schema(entry["input"], request_schema)
         messages = [{"role":"system", "content":prompt},
                     {"role":"user", "content":json.dumps(entry["input"], ensure_ascii=False)}]
         for attempt in range(2):
