@@ -23,3 +23,10 @@ py -3 -m unittest discover -s tests -v
 `image_prompt`. Старые материалы в `calibration/archive/pre-task11`
 сохранены для истории и больше не задают контракт.
 Изменения касаются калибровки; схемы mock в `app/` согласуются отдельно.
+## Изолированный GigaChatClient (#25)
+
+[Настройка, пример вызова, валидация и повтор](docs/gigachat-client.md).
+[Лог реального успешного вызова](docs/gigachat-client-success.json).
+
+Сервис возвращает строгий Pydantic-объект с полями контракта №11;
+подключение к FastAPI выполняется отдельно.
