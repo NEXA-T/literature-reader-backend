@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExplainResponseTask11",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "translation": {
+      "type": "string"
+    },
+    "context_meaning": {
+      "type": "string"
+    },
+    "slang_or_etymology": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "image_prompt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "translation",
+    "context_meaning",
+    "slang_or_etymology",
+    "image_prompt"
+  ]
+}

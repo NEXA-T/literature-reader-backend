@@ -1,0 +1,213 @@
+{
+  "started_at_utc": "2026-10-04T13:07:54.989606+00:00",
+  "model_requested": "GigaChat",
+  "prompt_file": "prompts/literary-analysis-v1.txt",
+  "system_prompt": "Ты — литературовед и лингвист. Объясни на русском языке значение выделенного выражения и его роль в данном контексте. Не ограничивайся дословным переводом, не выдумывай автора и произведение.\nВерни только один валидный JSON-объект без вступлений, заключений и Markdown. Поля: term (исходное выделение), definition (значение в контексте), explanation (пояснение связи с абзацем), examples (массив двух придуманных примеров употребления), expression_type (idiom, slang, metaphor, irony, literal или uncertain), literal_meaning (дословный смысл), context_evidence (массив точных коротких цитат из переданного контекста), uncertainty (строка, пустая если существенной неоднозначности нет).\n",
+  "prompt_sha256": "f53fee74f9478407067a4f511c7c34c86de0b910b466928ad7d6fb729bb389d8",
+  "structured_output": true,
+  "temperature": 0.1,
+  "cases": [
+    {
+      "id": "01_spill_secret",
+      "input": {
+        "selected_text": "spill the beans",
+        "context": "Mara had promised to keep the engagement secret until Sunday. But when her sister noticed the ring, she whispered, 'Come on, spill the beans.' Mara glanced at the closed door before answering."
+      },
+      "expected": "Просьба раскрыть секрет о помолвке; обещание молчать и закрытая дверь объясняют осторожность.",
+      "attempts": [
+        {
+          "raw_content": "{\"term\": \"spill the beans\", \"definition\": \"раскрыть секрет, выдать тайну\", \"explanation\": \"выражение подчеркивает желание сестры Маре немедленно узнать подробности о помолвке, несмотря на обещание держать это в секрете до определенного времени\", \"examples\": [\"После вечеринки кто-то случайно спалил наш план и все гости узнали правду.\", \"Когда я спросил подругу, куда мы пойдем вечером, она потребовала прекратить болтать и перестать сыпать бобы.\"], \"expression_type\": \"idiom\", \"literal meaning\": \"выплеснуть бобы\", \"context_evidence\": [\"Mara had promised to keep the engagement secret until Sunday. But when her sister noticed the ring, she whispered, 'Come on, spill the beans.'\"], \"uncertainty\": \"\"}",
+          "finish_reason": "stop",
+          "model_returned": "GigaChat:2.0.28.2",
+          "usage": {
+            "prompt_tokens": 222,
+            "completion_tokens": 168,
+            "total_tokens": 390,
+            "precached_prompt_tokens": 3
+          },
+          "valid": false,
+          "validation_error": "Fields do not match schema"
+        },
+        {
+          "raw_content": "{\"term\": \"spill the beans\", \"definition\": \"раскрыть секрет, выдать тайну\", \"explanation\": \"сестра Маре использует эту фразу, чтобы призвать её раскрыть детали помолвки, которые были обещаны сохранить в тайне до определённого момента\", \"examples\": [\"Директор пообещал сотрудникам, что объявит о сокращении только после выходных, но секретарь не выдержала и решила spill the beans.\", \"Ребята договорились никому не рассказывать о вечеринке, но кто-то из гостей не удержался и всё spill the beans.\"], \"expression_type\": \"idiom\", \"literal_meanings\": \"выплеснуть бобы\", \"context_evidence\": [\"Mara had promised to keep the engagement secret until Sunday. But when her sister noticed the ring, she whispered, 'Come on, spill the beans.' Mara glanced at the closed door before answering.\"], \"uncertainty\": \"\"}",
+          "finish_reason": "stop",
+          "model_returned": "GigaChat:2.0.28.2",
+          "usage": {
+            "prompt_tokens": 430,
+            "completion_tokens": 187,
+            "total_tokens": 617,
+            "precached_prompt_tokens": 3
+          },
+          "valid": false,
+          "validation_error": "Fields do not match schema"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "id": "02_greek",
+      "input": {
+        "selected_text": "it's all Greek to me",
+        "context": "The solicitor read the inheritance clause aloud, listing trusts, liens, and contingent beneficiaries. Henry understood each ordinary word, yet could not follow the legal meaning. He folded the papers and sighed, 'It's all Greek to me.'"
+      },
+      "expected": "Непонимание юридического смысла, а не реальный греческий язык; идиома, не сленг.",
+      "attempts": [
+        {
+          "raw_content": "{\"term\": \"it's all Greek to me\", \"definition\": \"это для меня китайская грамота; я ничего не понимаю\", \"explanation\": \"выражение используется, когда человек сталкивается с непонятной ему информацией, особенно сложной или специализированной\", \"examples\": [\"Эти финансовые отчёты — всё равно что греческий язык для меня.\", \"Её лекция по квантовой физике была настолько запутанной, что для меня это было всё греческое.\"], \"expression_type\": \"idiom\", \"literal_meaning\": \"всё это для меня похоже на греческий язык\", \"context_evidence\": [\"The solicitor read the inheritance clause aloud, listing trusts, liens, and contingent beneficiaries. Henry understood each ordinary word, yet could not follow the legal meaning. He folded the papers and sighed, 'It's all Greek to me.'\"], \"uncertainty\": \"\"}",
+          "finish_reason": "stop",
+          "model_returned": "GigaChat:2.0.28.2",
+          "usage": {
+            "prompt_tokens": 231,
+            "completion_tokens": 182,
+            "total_tokens": 413,
+            "precached_prompt_tokens": 3
+          },
+          "valid": true
+        }
+      ],
+      "accepted": true,
+      "response": {
+        "term": "it's all Greek to me",
+        "definition": "это для меня китайская грамота; я ничего не понимаю",
+        "explanation": "выражение используется, когда человек сталкивается с непонятной ему информацией, особенно сложной или специализированной",
+        "examples": [
+          "Эти финансовые отчёты — всё равно что греческий язык для меня.",
+          "Её лекция по квантовой физике была настолько запутанной, что для меня это было всё греческое."
+        ],
+        "expression_type": "idiom",
+        "literal_meaning": "всё это для меня похоже на греческий язык",
+        "context_evidence": [
+          "The solicitor read the inheritance clause aloud, listing trusts, liens, and contingent beneficiaries. Henry understood each ordinary word, yet could not follow the legal meaning. He folded the papers and sighed, 'It's all Greek to me.'"
+        ],
+        "uncertainty": ""
+      }
+    },
+    {
+      "id": "03_bullet",
+      "input": {
+        "selected_text": "bite the bullet",
+        "context": "For three nights Eleanor had avoided telling her father that she had lost the scholarship. There was no painless way to say it. At breakfast she decided to bite the bullet and confess before he opened the university's letter."
+      },
+      "expected": "Решиться на неприятный разговор и признание потери стипендии, преодолев страх.",
+      "attempts": [
+        {
+          "raw_content": "{\"term\": \"bite the bullet\", \"definition\": \"принять неизбежное трудное решение или ситуацию; стойко перенести боль или неприятность\", \"explanation\": \"персонаж долго избегал неприятного разговора, осознавая, что избежать боли невозможно, поэтому решает принять её и честно признаться отцу\", \"examples\": [\"После долгих колебаний она решила наконец bite the bullet и рассказать начальству о своей ошибке.\", \"Когда врачи сообщили страшный диагноз, он просто bite the bullet и принял свою судьбу\"], \"expression_type\": \"idiom\", \"literal meaning\": \"укусить пулю\", \"context_evidence\": [\"There was no painless way to say it.\", \"decided to bite the bullet and confess\"], \"uncertainty\": \"\"}",
+          "finish_reason": "stop",
+          "model_returned": "GigaChat:2.0.28.2",
+          "usage": {
+            "prompt_tokens": 226,
+            "completion_tokens": 156,
+            "total_tokens": 382,
+            "precached_prompt_tokens": 3
+          },
+          "valid": false,
+          "validation_error": "Fields do not match schema"
+        },
+        {
+          "raw_content": "{\"term\": \"bite the bullet\", \"definition\": \"принять неизбежное трудное решение или стойко перенести боль или неприятность\", \"explanation\": \"выражение описывает ситуацию, когда персонаж сталкивается с необходимостью сказать горькую правду, несмотря на страх перед реакцией собеседника\", \"examples\": [\"Ему пришлось bite the bullet и сообщить коллегам о сокращении зарплат.\", \"Она решилась bite the bullet и рассказала родителям о своей неудаче на экзамене.\"], \"expression_type\": \"idiom\", \"literal_meanings\": \"буквально укусить пулю\", \"context_evidence\": [\"For three nights Eleanor had avoided telling her father that she had lost the scholarship. There was no painless way to say it. At breakfast she decided to bite the bullet and confess before he opened the university's letter.\"], \"uncertainty\": \"\"}",
+          "finish_reason": "stop",
+          "model_returned": "GigaChat:2.0.28.2",
+          "usage": {
+            "prompt_tokens": 261,
+            "completion_tokens": 179,
+            "total_tokens": 440,
+            "precached_prompt_tokens": 164
+          },
+          "valid": false,
+          "validation_error": "Fields do not match schema"
+        }
+      ],
+      "accepted": false
+    },
+    {
+      "id": "04_hands",
+      "input": {
+        "selected_text": "руки опустились",
+        "context": "Он неделю переписывал рукопись, надеясь получить ответ редактора. Письмо снова содержало лишь отказ. У него руки опустились: даже открывать тетрадь больше не хотелось."
+      },
+      "expected": "Потеря мотивации после очередного отказа, а не положение рук.",
+      "attempts": [
+        {
+          "raw_content": "{\"term\": \"руки опустились\", \"definition\": \"чувство полной усталости, безнадежности и утраты сил; потеря мотивации и желания продолжать начатое\", \"explanation\": \"выражение описывает физическое состояние человека, символизируя эмоциональную и физическую усталость, когда кажется, что больше нет сил продолжать начатое дело\", \"examples\": [\"После трех бессонных ночей подготовки к экзаменам у нее руки опустились, и она уже не верила, что сможет сдать все предметы\", \"Когда он понял, что никогда не станет известным музыкантом, руки опустились, и он забросил гитару\"], \"expression_type\": \"idiom\", \"literal_meaning\": \"опустить руки вниз\", \"context_evidence\": [\"переписывал рукопись\", \"надеясь получить ответ редактора\", \"Письмо снова содержало лишь отказ\", \"даже открывать тетрадь больше не хотелось\"], \"uncertainty\": \"\"}",
+          "finish_reason": "stop",
+          "model_returned": "GigaChat:2.0.28.2",
+          "usage": {
+            "prompt_tokens": 57,
+            "completion_tokens": 193,
+            "total_tokens": 250,
+            "precached_prompt_tokens": 164
+          },
+          "valid": false,
+          "validation_error": "Invalid array length: context_evidence"
+        },
+        {
+          "raw_content": "{\"term\": \"руки опустились\", \"definition\": \"чувство полной усталости, безнадежности и утраты сил; потеря мотивации и желания продолжать начатое\", \"explanation\": \"выражение описывает физическое состояние человека, символизируя эмоциональную и физическую усталость, когда кажется, что больше нет сил продолжать начатое дело\", \"examples\": [\"После трех бессонных ночей подготовки к экзаменам у нее руки опустились, и она уже не верила, что сможет сдать все предметы\", \"Когда он понял, что никогда не станет известным музыкантом, руки опустились, и он забросил гитару\"], \"expression_type\": \"idiom\", \"literal_meaning\": \"опустить руки вниз\", \"context_evidence\": [\"Он неделю переписывал рукопись, надеясь получить ответ редактора. Письмо снова содержало лишь отказ. У него руки опустились: даже открывать тетрадь больше не хотелось.\"], \"uncertainty\": \"\"}",
+          "finish_reason": "stop",
+          "model_returned": "GigaChat:2.0.28.2",
+          "usage": {
+            "prompt_tokens": 292,
+            "completion_tokens": 195,
+            "total_tokens": 487,
+            "precached_prompt_tokens": 164
+          },
+          "valid": true
+        }
+      ],
+      "accepted": true,
+      "response": {
+        "term": "руки опустились",
+        "definition": "чувство полной усталости, безнадежности и утраты сил; потеря мотивации и желания продолжать начатое",
+        "explanation": "выражение описывает физическое состояние человека, символизируя эмоциональную и физическую усталость, когда кажется, что больше нет сил продолжать начатое дело",
+        "examples": [
+          "После трех бессонных ночей подготовки к экзаменам у нее руки опустились, и она уже не верила, что сможет сдать все предметы",
+          "Когда он понял, что никогда не станет известным музыкантом, руки опустились, и он забросил гитару"
+        ],
+        "expression_type": "idiom",
+        "literal_meaning": "опустить руки вниз",
+        "context_evidence": [
+          "Он неделю переписывал рукопись, надеясь получить ответ редактора. Письмо снова содержало лишь отказ. У него руки опустились: даже открывать тетрадь больше не хотелось."
+        ],
+        "uncertainty": ""
+      }
+    },
+    {
+      "id": "05_irony",
+      "input": {
+        "selected_text": "Ну ты и герой",
+        "context": "При первом шуме во дворе Павел спрятался под столом, оставив младшего брата у двери. Когда выяснилось, что это упало пустое ведро, сестра посмотрела на него и сказала: «Ну ты и герой». Павел покраснел."
+      },
+      "expected": "Иронический упрёк в трусости, а не похвала; покраснение и поведение подтверждают.",
+      "attempts": [
+        {
+          "raw_content": "{\"term\": \"герой\", \"definition\": \"ироничная оценка чьего-либо поступка как недостаточно мужественного или смелого\", \"explanation\": \"Выражение используется для подчеркивания несоответствия реального поведения человека общепринятым представлениям о героизме или храбрости.\", \"examples\": [\"После того как Антон проспал важную встречу, друзья сказали ему: „Ну ты и герой!“\", \"Когда Катя отказалась помочь бабушке перенести тяжелые сумки, та заметила: „Вот тебе и герой наш домашний!“\"], \"expression_type\": \"irony\", \"literal meaning\": \"смелый человек, совершающий отважные поступки\", \"context_evidence\": [\"При первом шуме во дворе Павел спрятался под столом, оставив младшего брата у двери.\", \"Павел покраснел.\"], \"uncertainty\": \"\"}",
+          "finish_reason": "stop",
+          "model_returned": "GigaChat:2.0.28.2",
+          "usage": {
+            "prompt_tokens": 229,
+            "completion_tokens": 169,
+            "total_tokens": 398,
+            "precached_prompt_tokens": 3
+          },
+          "valid": false,
+          "validation_error": "Fields do not match schema"
+        },
+        {
+          "raw_content": "{\"term\": \"ну ты и герой\", \"definition\": \"ироническая фраза, используемая для уничижительной оценки чьих-либо действий, когда ожидаемый героизм или смелость не были продемонстрированы\", \"explanation\": \"Фраза подчеркивает несоответствие реальных действий человека общепринятым ожиданиям от героя или смельчака.\", \"examples\": [\"После того как Олег отказался выйти на арену боя, друзья сказали ему: «Ну ты и герой!»\", \"Когда Маша не помогла другу поднять тяжелый ящик, он заметил: «Вот тебе и герой наш!»\"], \"expression_type\": \"irony\", \"literal_meanings\": \"действительно смелый и героический человек\", \"context_evidence\": [\"При первом шуме во дворе Павел спрятался под столом, оставив младшего брата у двери.\", \"Павел покраснел.\"], \"uncertainty\": \"\"}",
+          "finish_reason": "stop",
+          "model_returned": "GigaChat:2.0.28.2",
+          "usage": {
+            "prompt_tokens": 277,
+            "completion_tokens": 179,
+            "total_tokens": 456,
+            "precached_prompt_tokens": 164
+          },
+          "valid": false,
+          "validation_error": "Fields do not match schema"
+        }
+      ],
+      "accepted": false
+    }
+  ],
+  "completed_at_utc": "2026-10-04T13:08:12.515224+00:00",
+  "accepted_count": 2
+}
