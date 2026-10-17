@@ -2,13 +2,13 @@ from app.schemas.explain import ExplainRequest, ExplainResponse
 
 
 async def explain_text(payload: ExplainRequest) -> ExplainResponse:
-    """Mock-реализация. В следующем спринте здесь будет вызов GigaChat"""
     return ExplainResponse(
-        term=payload.selected_text[:64],
-        definition="Mock-определение (будет заменено на ответ GigaChat)",
-        explanation=(
-            "заглушка для проверки контракта API "
+        translation=f"[mock] Перевод: {payload.selected_text}",
+        context_meaning=(
+            "Это заглушка для проверки контракта API"
             f"Контекст получен: {bool(payload.context)}"
+            f"Книга: {payload.book_title or 'не указана'}"
         ),
-        examples=["Пример 1", "Пример 2"],
+        slang_or_etymology=None,
+        image_prompt="A mock scene placeholder in English",
     )
