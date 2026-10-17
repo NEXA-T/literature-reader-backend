@@ -11,3 +11,11 @@
 ```powershell
 py -3 -m unittest discover -s tests -v
 ```
+
+## Изолированный GigaChatClient (#25)
+
+[Настройка, пример вызова, валидация и повтор](docs/gigachat-client.md).
+[Лог реального успешного вызова](docs/gigachat-client-success.json).
+
+Сервис возвращает строгий Pydantic-объект с полями контракта №11;
+подключение к FastAPI выполняется отдельно.
