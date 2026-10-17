@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-10-17T06:45:31.148595+00:00",
+  "model_requested": "GigaChat-2-Max",
+  "method": "GigaChatClient.analyze_text",
+  "result_type": "AIAnalysis",
+  "input": {
+    "selected_text": "bite the bullet",
+    "context": "For three nights Eleanor had avoided telling her father that she had lost the scholarship. There was no painless way to say it. At breakfast she decided to bite the bullet and confess before he opened the university's letter."
+  },
+  "result": {
+    "translation": "взять себя в руки и признаться",
+    "context_meaning": "Элеанор три ночи откладывала неприятную беседу с отцом об утрате стипендии. Она понимала, что сообщить эту новость будет тяжело. За завтраком она решилась набраться смелости и первой рассказать отцу правду до того, как он прочтёт официальное письмо из университета.",
+    "slang_or_etymology": null,
+    "image_prompt": "A young woman sitting at a kitchen table looking nervous as she prepares to tell her father bad news over breakfast."
+  },
+  "validation": "passed"
+}
