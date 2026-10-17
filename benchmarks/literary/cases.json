@@ -1,0 +1,330 @@
+{
+  "version": "1.0",
+  "frozen_at_utc": "2026-10-17T06:57:28.484194+00:00",
+  "normalization": "Only paragraph-internal whitespace collapsed to one space; original punctuation and Gutenberg underscore emphasis preserved. Adjacent complete paragraphs joined by two newlines. No invented bridge text.",
+  "scope": "15 English-language public-domain excerpts, 5 books, 4 authors; not multilingual or independent human-reviewed gold standard.",
+  "cases": [
+    {
+      "id": "01_tale_tail",
+      "selected_text": "long tail",
+      "context": "“Mine is a long and a sad tale!” said the Mouse, turning to Alice, and sighing.\n\n“It _is_ a long tail, certainly,” said Alice, looking down with wonder at the Mouse’s tail; “but why do you call it sad?” And she kept on puzzling about it while the Mouse was speaking, so that her idea of the tale was something like this:—",
+      "book_title": "Alice’s Adventures in Wonderland",
+      "author": "Lewis Carroll",
+      "category": "wordplay",
+      "expected_meaning": "Алиса слышит tale (рассказ) как tail (хвост). Ответ должен сохранить буквальный хвост и объяснить омофонию, а не только длину истории.",
+      "source": {
+        "url": "https://www.gutenberg.org/cache/epub/11/pg11.txt",
+        "reading_url": "https://www.gutenberg.org/ebooks/11",
+        "chapter": "Chapter III",
+        "paragraph_indices_zero_based": [
+          105,
+          106
+        ],
+        "source_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+        "context_sha256": "5a0752162467fc0254ad21a0dd8e5a7bcee0b7da8a4ad0d4560d90f7904d1383"
+      },
+      "reference_notes": []
+    },
+    {
+      "id": "02_murdering_time",
+      "selected_text": "murdering the time",
+      "context": "“Well, I’d hardly finished the first verse,” said the Hatter, “when the Queen jumped up and bawled out, ‘He’s murdering the time! Off with his head!’”\n\n“How dreadfully savage!” exclaimed Alice.\n\n“And ever since that,” the Hatter went on in a mournful tone, “he won’t do a thing I ask! It’s always six o’clock now.”\n\nA bright idea came into Alice’s head. “Is that the reason so many tea-things are put out here?” she asked.\n\n“Yes, that’s it,” said the Hatter with a sigh: “it’s always tea-time, and we’ve no time to wash the things between whiles.”",
+      "book_title": "Alice’s Adventures in Wonderland",
+      "author": "Lewis Carroll",
+      "category": "wordplay_metaphor",
+      "expected_meaning": "Двойной смысл: плохое исполнение/нарушение музыкального времени и олицетворённое Время, обиженное Шляпником. Из-за этого часы стоят на шести. Не реальное убийство человека.",
+      "source": {
+        "url": "https://www.gutenberg.org/cache/epub/11/pg11.txt",
+        "reading_url": "https://www.gutenberg.org/ebooks/11",
+        "chapter": "Chapter VII",
+        "paragraph_indices_zero_based": [
+          380,
+          384
+        ],
+        "source_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+        "context_sha256": "53765e590172101cd7db833d5bbae8e2368d157a93ce5a563e7f18d11bfc4b28"
+      },
+      "reference_notes": []
+    },
+    {
+      "id": "03_sense_sounds",
+      "selected_text": "Take care of the sense, and the sounds will take care of themselves.",
+      "context": "“Somebody said,” Alice whispered, “that it’s done by everybody minding their own business!”\n\n“Ah, well! It means much the same thing,” said the Duchess, digging her sharp little chin into Alice’s shoulder as she added, “and the moral of _that_ is—‘Take care of the sense, and the sounds will take care of themselves.’”\n\n“How fond she is of finding morals in things!” Alice thought to herself.",
+      "book_title": "Alice’s Adventures in Wonderland",
+      "author": "Lewis Carroll",
+      "category": "proverb_parody",
+      "expected_meaning": "Пародия на Take care of the pence, and the pounds will take care of themselves; подмена pence/pounds на sense/sounds и навязчивый поиск морали Герцогиней. Не обычный совет о голосе.",
+      "source": {
+        "url": "https://www.gutenberg.org/cache/epub/11/pg11.txt",
+        "reading_url": "https://www.gutenberg.org/ebooks/11",
+        "chapter": "Chapter IX",
+        "paragraph_indices_zero_based": [
+          513,
+          515
+        ],
+        "source_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+        "context_sha256": "949d6bc84ca6a659f3a16c49c73cbe6e0a9bec3b0df07dceced92eab47b1065e"
+      },
+      "reference_notes": [
+        "https://tile.loc.gov/storage-services/public/gdcmassbookdig/alicesadventures00carr_10/alicesadventures00carr_10.pdf"
+      ]
+    },
+    {
+      "id": "04_consequence",
+      "selected_text": "give consequence",
+      "context": "“Which do you mean?” and turning round, he looked for a moment at Elizabeth, till, catching her eye, he withdrew his own, and coldly said, “She is tolerable: but not handsome enough to tempt _me_; and I am in no humour at present to give consequence to young ladies who are slighted by other men. You had better return to your partner and enjoy her smiles, for you are wasting your time with me.”\n\nMr. Bingley followed his advice. Mr. Darcy walked off; and Elizabeth remained with no very cordial feelings towards him. She told the story, however, with great spirit among her friends; for she had a lively, playful disposition, which delighted in anything ridiculous.",
+      "book_title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "category": "historical_idiom",
+      "expected_meaning": "Дарси не хочет оказывать вниманием общественную значимость девушкам, которыми пренебрегают другие. consequence здесь значимость/статус, не последствия или наказание.",
+      "source": {
+        "url": "https://www.gutenberg.org/cache/epub/1342/pg1342.txt",
+        "reading_url": "https://www.gutenberg.org/ebooks/1342",
+        "chapter": "Chapter III",
+        "paragraph_indices_zero_based": [
+          243,
+          244
+        ],
+        "source_sha256": "3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75",
+        "context_sha256": "272291704c7706090f8413ad922356d20189089316cf3c9e3195f692a1f60033"
+      },
+      "reference_notes": []
+    },
+    {
+      "id": "05_entail",
+      "selected_text": "entailed",
+      "context": "Mr. Bennet’s property consisted almost entirely in an estate of two thousand a year, which, unfortunately for his daughters, was entailed, in default of heirs male, on a distant relation; and their mother’s fortune, though ample for her situation in life, could but ill supply the deficiency of his. Her father had been an attorney in Meryton, and had left her four thousand pounds.",
+      "book_title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "category": "historical_term",
+      "expected_meaning": "Имущественное ограничение наследования: при отсутствии сыновей поместье переходит дальнему родственнику; дочери лишаются этого наследства. Не просто залог или необходимость.",
+      "source": {
+        "url": "https://www.gutenberg.org/cache/epub/1342/pg1342.txt",
+        "reading_url": "https://www.gutenberg.org/ebooks/1342",
+        "chapter": "Chapter VII",
+        "paragraph_indices_zero_based": [
+          362,
+          362
+        ],
+        "source_sha256": "3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75",
+        "context_sha256": "a5a79996926c90a092abd0e43a3494c2e522f0d68da3b0b2f613ea41a36df9a9"
+      },
+      "reference_notes": [
+        "https://www.jasna.org/publications-2/persuasions-online/volume-44-no-1/hall/"
+      ]
+    },
+    {
+      "id": "06_fine_eyes",
+      "selected_text": "fine eyes",
+      "context": "“Certainly not.”\n\n“To walk three miles, or four miles, or five miles, or whatever it is, above her ancles in dirt, and alone, quite alone! what could she mean by it? It seems to me to show an abominable sort of conceited independence, a most country-town indifference to decorum.”\n\n“It shows an affection for her sister that is very pleasing,” said Bingley.\n\n“I am afraid, Mr. Darcy,” observed Miss Bingley, in a half whisper, “that this adventure has rather affected your admiration of her fine eyes.”\n\n“Not at all,” he replied: “they were brightened by the exercise.” A short pause followed this speech, and Mrs. Hurst began again,--",
+      "book_title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "category": "irony_subtext",
+      "expected_meaning": "Каролина Бингли пытается высмеять привлекательность Элизабет после её прихода; Дарси возражает, что глаза стали ярче от движения. Красивые/выразительные глаза, не хорошее зрение; подкол и интерес Дарси.",
+      "source": {
+        "url": "https://www.gutenberg.org/cache/epub/1342/pg1342.txt",
+        "reading_url": "https://www.gutenberg.org/ebooks/1342",
+        "chapter": "Chapter VIII",
+        "paragraph_indices_zero_based": [
+          426,
+          430
+        ],
+        "source_sha256": "3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75",
+        "context_sha256": "24a556b9ed6c52220112c3625bf653ace34fefac0005627c32db0fb72945cc24"
+      },
+      "reference_notes": []
+    },
+    {
+      "id": "07_door_nail",
+      "selected_text": "dead as a door-nail",
+      "context": "MARLEY was dead: to begin with. There is no doubt whatever about that. The register of his burial was signed by the clergyman, the clerk, the undertaker, and the chief mourner. Scrooge signed it: and Scrooge's name was good upon 'Change, for anything he chose to put his hand to. Old Marley was as dead as a door-nail.\n\nMind! I don't mean to say that I know, of my own knowledge, what there is particularly dead about a door-nail. I might have been inclined, myself, to regard a coffin-nail as the deadest piece of ironmongery in the trade. But the wisdom of our ancestors is in the simile; and my unhallowed hands shall not disturb it, or the Country's done for. You will therefore permit me to repeat, emphatically, that Marley was as dead as a door-nail.",
+      "book_title": "A Christmas Carol",
+      "author": "Charles Dickens",
+      "category": "idiom",
+      "expected_meaning": "Совершенно мёртв: повествователь настаивает на смерти Марли, чтобы последующее появление призрака было значимым; шутит о буквальном гвозде. Не описание самого гвоздя как умершего.",
+      "source": {
+        "url": "https://www.gutenberg.org/cache/epub/46/pg46.txt",
+        "reading_url": "https://www.gutenberg.org/ebooks/46",
+        "chapter": "Stave I",
+        "paragraph_indices_zero_based": [
+          19,
+          20
+        ],
+        "source_sha256": "8c36b93723d454982df045ec0efdf2664e5a48e6b5e2f670e883575f75ad0cc8",
+        "context_sha256": "63a545fb0fd61a4739b79131cb588da93ce93bc55458ccc57d2d149c2e4b3ccf"
+      },
+      "reference_notes": []
+    },
+    {
+      "id": "08_gravy_grave",
+      "selected_text": "more of gravy than of grave",
+      "context": "\"Because,\" said Scrooge, \"a little thing affects them. A slight disorder of the stomach makes them cheats. You may be an undigested bit of beef, a blot of mustard, a crumb of cheese, a fragment of an underdone potato. There's more of gravy than of grave about you, whatever you are!\"\n\nScrooge was not much in the habit of cracking jokes, nor did he feel, in his heart, by any means waggish then. The truth is, that he tried to be smart, as a means of distracting his own attention, and keeping down his terror; for the spectre's voice disturbed the very marrow in his bones.",
+      "book_title": "A Christmas Carol",
+      "author": "Charles Dickens",
+      "category": "wordplay",
+      "expected_meaning": "Созвучие gravy (подливка) и grave (могила): Скрудж объясняет призрака несварением и шутит, подавляя страх. Не призрак, буквально состоящий из соуса.",
+      "source": {
+        "url": "https://www.gutenberg.org/cache/epub/46/pg46.txt",
+        "reading_url": "https://www.gutenberg.org/ebooks/46",
+        "chapter": "Stave I",
+        "paragraph_indices_zero_based": [
+          133,
+          134
+        ],
+        "source_sha256": "8c36b93723d454982df045ec0efdf2664e5a48e6b5e2f670e883575f75ad0cc8",
+        "context_sha256": "f1ef0f31cfb0486477ef319a289ea6ecefb85a7b78d8c8df001fc7b260889417"
+      },
+      "reference_notes": []
+    },
+    {
+      "id": "09_humbug",
+      "selected_text": "Humbug",
+      "context": "\"A merry Christmas, uncle! God save you!\" cried a cheerful voice. It was the voice of Scrooge's nephew, who came upon him so quickly that this was the first intimation he had of his approach.\n\n\"Bah!\" said Scrooge, \"Humbug!\"\n\nHe had so heated himself with rapid walking in the fog and frost, this nephew of Scrooge's, that he was all in a glow; his face was ruddy and handsome; his eyes sparkled, and his breath smoked again.\n\n\"Christmas a humbug, uncle!\" said Scrooge's nephew. \"You don't mean that, I am sure?\"\n\n\"I do,\" said Scrooge. \"Merry Christmas! What right have you to be merry? What reason have you to be merry? You're poor enough.\"",
+      "book_title": "A Christmas Carol",
+      "author": "Charles Dickens",
+      "category": "historical_colloquialism",
+      "expected_meaning": "Скрудж презрительно называет рождественские поздравления чепухой/обманом/вздором; это скептическое отвержение праздника, не жук, не имя человека.",
+      "source": {
+        "url": "https://www.gutenberg.org/cache/epub/46/pg46.txt",
+        "reading_url": "https://www.gutenberg.org/ebooks/46",
+        "chapter": "Stave I",
+        "paragraph_indices_zero_based": [
+          30,
+          34
+        ],
+        "source_sha256": "8c36b93723d454982df045ec0efdf2664e5a48e6b5e2f670e883575f75ad0cc8",
+        "context_sha256": "e444a5074c221b6b571b99246b837ed2cabbb1fcfa91341e0f68deed78b2007c"
+      },
+      "reference_notes": []
+    },
+    {
+      "id": "10_black_spot",
+      "selected_text": "black spot",
+      "context": "I went down on my knees at once. On the floor close to his hand there was a little round of paper, blackened on the one side. I could not doubt that this was the _black spot;_ and taking it up, I found written on the other side, in a very good, clear hand, this short message: “You have till ten tonight.”",
+      "book_title": "Treasure Island",
+      "author": "Robert Louis Stevenson",
+      "category": "cultural_term",
+      "expected_meaning": "Пиратская чёрная метка: почерневший кружок бумаги с ультиматумом до десяти; знак угрозы/приговора. Не болезнь или просто грязное пятно. Не выдавать литературный обычай за доказанную общую историю пиратов.",
+      "source": {
+        "url": "https://www.gutenberg.org/cache/epub/120/pg120.txt",
+        "reading_url": "https://www.gutenberg.org/ebooks/120",
+        "chapter": "Chapter III",
+        "paragraph_indices_zero_based": [
+          153,
+          153
+        ],
+        "source_sha256": "5bc08275eacea8640b1aa185c645283bb8c564d7b23df6b03437d229b4fc6ebd",
+        "context_sha256": "1a1193baa4025c5b862ef47f046027a55b9ff3cb45923755c8c4430e6b8a291b"
+      },
+      "reference_notes": []
+    },
+    {
+      "id": "11_pieces_eight",
+      "selected_text": "pieces of eight",
+      "context": "It was a long, difficult business, for the coins were of all countries and sizes--doubloons, and louis d’ors, and guineas, and pieces of eight, and I know not what besides, all shaken together at random. The guineas, too, were about the scarcest, and it was with these only that my mother knew how to make her count.",
+      "book_title": "Treasure Island",
+      "author": "Robert Louis Stevenson",
+      "category": "historical_term",
+      "expected_meaning": "Испанские серебряные монеты достоинством восемь реалов среди разных валют в сундуке; не восемь случайных кусочков и не обязательно золотые монеты.",
+      "source": {
+        "url": "https://www.gutenberg.org/cache/epub/120/pg120.txt",
+        "reading_url": "https://www.gutenberg.org/ebooks/120",
+        "chapter": "Chapter IV",
+        "paragraph_indices_zero_based": [
+          164,
+          164
+        ],
+        "source_sha256": "5bc08275eacea8640b1aa185c645283bb8c564d7b23df6b03437d229b4fc6ebd",
+        "context_sha256": "689ec518885fb362407c781b9af9c4c7ce9ead9e6946fbaa1691406aa637ed75"
+      },
+      "reference_notes": []
+    },
+    {
+      "id": "12_dead_men",
+      "selected_text": "dead men don’t bite",
+      "context": "“For thirty years,” he said, “I’ve sailed the seas and seen good and bad, better and worse, fair weather and foul, provisions running out, knives going, and what not. Well, now I tell you, I never seen good come o’ goodness yet. Him as strikes first is my fancy; dead men don’t bite; them’s my views--amen, so be it. And now, you look here,” he added, suddenly changing his tone, “we’ve had about enough of this foolery. The tide’s made good enough by now. You just take my orders, Cap’n Hawkins, and we’ll sail slap in and be done with it.”",
+      "book_title": "Treasure Island",
+      "author": "Robert Louis Stevenson",
+      "category": "violent_idiom",
+      "expected_meaning": "Мёртвые не могут отомстить/помешать: Хэндс оправдывает упреждающее насилие, предпочитает ударить первым; не совет о животных или просто очевидный биологический факт.",
+      "source": {
+        "url": "https://www.gutenberg.org/cache/epub/120/pg120.txt",
+        "reading_url": "https://www.gutenberg.org/ebooks/120",
+        "chapter": "Chapter XXVI",
+        "paragraph_indices_zero_based": [
+          1074,
+          1074
+        ],
+        "source_sha256": "5bc08275eacea8640b1aa185c645283bb8c564d7b23df6b03437d229b4fc6ebd",
+        "context_sha256": "421760275f21045f99e00f770a5eacb346871673a7ccbabcdf4c6e4f1a390412"
+      },
+      "reference_notes": []
+    },
+    {
+      "id": "13_by_hand",
+      "selected_text": "by hand",
+      "context": "My sister, Mrs. Joe Gargery, was more than twenty years older than I, and had established a great reputation with herself and the neighbours because she had brought me up “by hand.” Having at that time to find out for myself what the expression meant, and knowing her to have a hard and heavy hand, and to be much in the habit of laying it upon her husband as well as upon me, I supposed that Joe Gargery and I were both brought up by hand.",
+      "book_title": "Great Expectations",
+      "author": "Charles Dickens",
+      "category": "wordplay_historical",
+      "expected_meaning": "Базовое старое значение — вскармливание младенца без матери/кормилицы; детский Пип связывает выражение с тяжёлой рукой сестры и побоями. Нужны оба слоя, не только строгая дисциплина.",
+      "source": {
+        "url": "https://www.gutenberg.org/cache/epub/1400/pg1400.txt",
+        "reading_url": "https://www.gutenberg.org/ebooks/1400",
+        "chapter": "Chapter II",
+        "paragraph_indices_zero_based": [
+          64,
+          64
+        ],
+        "source_sha256": "9a637118af8e953e9764ec603d9b0a032883384d465acac2e27966a80cf1c6f8",
+        "context_sha256": "7823f7ea1c0990c6190485294c641fc356a7e257e46f3f6e7a218fee6ad4eff3"
+      },
+      "reference_notes": [
+        "https://www.ncgsjournal.com/issue41/antonio.html",
+        "https://academic.oup.com/cornell-scholarship-online/book/56639/chapter-abstract/453306062"
+      ]
+    },
+    {
+      "id": "14_bolted",
+      "selected_text": "I Bolted",
+      "context": "“You know, Pip,” said Joe, solemnly, with his last bite in his cheek, and speaking in a confidential voice, as if we two were quite alone, “you and me is always friends, and I’d be the last to tell upon you, any time. But such a—” he moved his chair and looked about the floor between us, and then again at me—“such a most oncommon Bolt as that!”\n\n“Been bolting his food, has he?” cried my sister.\n\n“You know, old chap,” said Joe, looking at me, and not at Mrs. Joe, with his bite still in his cheek, “I Bolted, myself, when I was your age—frequent—and as a boy I’ve been among a many Bolters; but I never see your Bolting equal yet, Pip, and it’s a mercy you ain’t Bolted dead.”\n\nMy sister made a dive at me, and fished me up by the hair, saying nothing more than the awful words, “You come along and be dosed.”",
+      "book_title": "Great Expectations",
+      "author": "Charles Dickens",
+      "category": "polysemy_colloquialism",
+      "expected_meaning": "Джо говорит о быстром заглатывании пищи, не о побеге или запирании двери; сравнивает Пипа с собой ребёнком, боится, что тот подавится. Контекст еды и кусок за щекой важны.",
+      "source": {
+        "url": "https://www.gutenberg.org/cache/epub/1400/pg1400.txt",
+        "reading_url": "https://www.gutenberg.org/ebooks/1400",
+        "chapter": "Chapter II",
+        "paragraph_indices_zero_based": [
+          98,
+          101
+        ],
+        "source_sha256": "9a637118af8e953e9764ec603d9b0a032883384d465acac2e27966a80cf1c6f8",
+        "context_sha256": "c9e25eec73c99404a8a529b4dd938363a52cf73884d73e7148bbb197bb6e9cc4"
+      },
+      "reference_notes": []
+    },
+    {
+      "id": "15_common_boy",
+      "selected_text": "common labouring-boy",
+      "context": "Miss Havisham beckoned her to come close, and took up a jewel from the table, and tried its effect upon her fair young bosom and against her pretty brown hair. “Your own, one day, my dear, and you will use it well. Let me see you play cards with this boy.”\n\n“With this boy? Why, he is a common labouring-boy!”\n\nI thought I overheard Miss Havisham answer,—only it seemed so unlikely,—“Well? You can break his heart.”\n\n“What do you play, boy?” asked Estella of myself, with the greatest disdain.",
+      "book_title": "Great Expectations",
+      "author": "Charles Dickens",
+      "category": "class_subtext",
+      "expected_meaning": "Эстелла презрительно называет Пипа простым мальчиком из рабочего сословия; common — низкое социальное положение в её оценке, а не общий/обычный трудящийся без подтекста. Контраст богатого дома и презрения к происхождению.",
+      "source": {
+        "url": "https://www.gutenberg.org/cache/epub/1400/pg1400.txt",
+        "reading_url": "https://www.gutenberg.org/ebooks/1400",
+        "chapter": "Chapter VIII",
+        "paragraph_indices_zero_based": [
+          465,
+          468
+        ],
+        "source_sha256": "9a637118af8e953e9764ec603d9b0a032883384d465acac2e27966a80cf1c6f8",
+        "context_sha256": "0eb6bb3b50d4588d48c62f6d833146ce507baf3cdc329a35a310ed4523ffd304"
+      },
+      "reference_notes": []
+    }
+  ]
+}

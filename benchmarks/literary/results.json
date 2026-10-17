@@ -1,0 +1,192 @@
+{
+  "started_at_utc": "2026-10-17T06:57:28.952190+00:00",
+  "model_requested": "GigaChat-2-Max",
+  "dataset_sha256": "380a59c06cd059b24771dd556f7b4303566f4c838e05b44486c9c0a781f70753",
+  "system_prompt_sha256": "e50bbde9070881eb60e0186897065667ed8888af524e8249e3f8806efb8a7bfe",
+  "temperature": 0.1,
+  "max_tokens": 1400,
+  "max_attempts": 2,
+  "cases": [
+    {
+      "id": "01_tale_tail",
+      "status": "success",
+      "result_type": "AIAnalysis",
+      "response": {
+        "translation": "длинный хвост",
+        "context_meaning": "В данном контексте фраза «long tail» является игрой слов между словами 'tale' (история) и 'tail' (хвост), подчеркивая как длину рассказываемой истории Мышью, так и физическую особенность её длинного хвоста. Алиса воспринимает это буквально, удивляясь длине мышиных рассказов и одновременно рассматривая длинный хвост животного.",
+        "slang_or_etymology": null,
+        "image_prompt": "A mouse telling a story to Alice, emphasizing its long tail."
+      },
+      "latency_seconds": 2.835
+    },
+    {
+      "id": "02_murdering_time",
+      "status": "success",
+      "result_type": "AIAnalysis",
+      "response": {
+        "translation": "убивая время",
+        "context_meaning": "В данном контексте фраза означает нарушение правильного течения времени, так как Шляпник исполняет песню неправильно, вызывая гнев Королевы. Это приводит к тому, что часы застывают на шести часах вечера, создавая вечную чайную церемонию.",
+        "slang_or_etymology": null,
+        "image_prompt": "The Mad Hatter singing off-key as the Queen angrily demands his execution."
+      },
+      "latency_seconds": 1.823
+    },
+    {
+      "id": "03_sense_sounds",
+      "status": "success",
+      "result_type": "AIAnalysis",
+      "response": {
+        "translation": "Позаботься о смысле, и звуки сами позаботятся о себе.",
+        "context_meaning": "Герцогиня даёт Алисе совет, который можно интерпретировать как рекомендацию сосредоточиться на содержании и сути дела, тогда форма и внешние проявления сложатся естественным образом. Это высказывание звучит как мораль истории, которую она рассказывает, подчеркивая важность осмысленности действий и слов.",
+        "slang_or_etymology": null,
+        "image_prompt": "A curious girl listening intently to a stern-looking older woman whispering advice."
+      },
+      "latency_seconds": 2.12
+    },
+    {
+      "id": "04_consequence",
+      "status": "success",
+      "result_type": "AIAnalysis",
+      "response": {
+        "translation": "придавать значение",
+        "context_meaning": "Мистер Дарси говорит, что он не намерен обращать внимание на молодых девушек, которых игнорируют другие мужчины, подчеркивая своё высокомерие и нежелание считаться с чувствами окружающих. Его слова демонстрируют пренебрежительное отношение к Элизабет Беннет и подчёркивают его снобизм.",
+        "slang_or_etymology": null,
+        "image_prompt": "A man walking away from a group of people while another man looks disappointed."
+      },
+      "latency_seconds": 1.829
+    },
+    {
+      "id": "05_entail",
+      "status": "success",
+      "result_type": "AIAnalysis",
+      "response": {
+        "translation": "был передан по наследству с ограничением права наследования женщинами",
+        "context_meaning": "В романе Джейн Остин \"Гордость и предубеждение\" состояние мистера Беннета было ограничено законом майората, согласно которому поместье могло быть унаследовано только мужчиной. В случае отсутствия прямых мужских потомков оно переходило дальнему родственнику мужского пола, оставляя дочерей практически без наследства. Это создавало серьёзную финансовую проблему для семьи Беннет, так как их материальное положение зависело от небольшого состояния жены, которое не могло компенсировать потерю основного имущества.",
+        "slang_or_etymology": null,
+        "image_prompt": "A worried family discussing financial matters around a table."
+      },
+      "latency_seconds": 4.146
+    },
+    {
+      "id": "06_fine_eyes",
+      "status": "success",
+      "result_type": "AIAnalysis",
+      "response": {
+        "translation": "красивыми глазами",
+        "context_meaning": "В данном контексте фраза относится к героине Элизабет Беннет из романа Джейн Остин \"Гордость и предубеждение\", подчёркивая её физическую привлекательность, особенно глаза, которые привлекают внимание окружающих. Мисс Бингли намекает, что грязная прогулка может негативно сказаться на репутации девушки и уменьшить восхищение ею со стороны мистера Дарси. Однако мистер Дарси опровергает это предположение, утверждая, что физическая активность лишь подчеркнула красоту глаз Элизабет.",
+        "slang_or_etymology": null,
+        "image_prompt": "A woman with bright eyes walking through muddy terrain."
+      },
+      "latency_seconds": 3.031
+    },
+    {
+      "id": "07_door_nail",
+      "status": "success",
+      "result_type": "AIAnalysis",
+      "response": {
+        "translation": "мёртв как дверной гвоздь",
+        "context_meaning": "Автор подчёркивает абсолютную несомненность смерти Марли, используя устойчивое сравнение, которое подчеркивает окончательность произошедшего. Он также шутливо замечает, что сам не знает, почему именно дверной гвоздь стал символом чего-то окончательно мёртвого, но уважает традицию этого сравнения. Таким образом, фраза усиливает уверенность читателя в том, что смерть персонажа бесспорна и необратима.",
+        "slang_or_etymology": null,
+        "image_prompt": "An old-fashioned door with an ornate nail prominently displayed."
+      },
+      "latency_seconds": 3.032
+    },
+    {
+      "id": "08_gravy_grave",
+      "status": "success",
+      "result_type": "AIAnalysis",
+      "response": {
+        "translation": "больше соуса, чем могилы",
+        "context_meaning": "Скрудж пытается отвлечь себя от страха перед призраком, утверждая, что тот может быть всего лишь результатом несварения желудка. Он говорит это скорее для самоуспокоения, так как голос привидения пугает его до глубины души. Фраза подчеркивает абсурдность и комичность попытки объяснить сверхъестественное явление обыденными причинами вроде еды.",
+        "slang_or_etymology": null,
+        "image_prompt": "Man arguing with ghostly figure while holding hand to chest."
+      },
+      "latency_seconds": 2.622
+    },
+    {
+      "id": "09_humbug",
+      "status": "success",
+      "result_type": "AIAnalysis",
+      "response": {
+        "translation": "Чепуха",
+        "context_meaning": "Скрудж выражает своё пренебрежительное отношение к празднику Рождества, считая его бессмысленным и лицемерным мероприятием. Он резко реагирует на приветствие племянника, который искренне радуется наступлению праздника, подчеркивая тем самым разницу во взглядах между ними. Скрудж подчёркивает свою позицию, утверждая, что бедность племянника делает неуместными любые проявления радости и веселья.",
+        "slang_or_etymology": null,
+        "image_prompt": "A cold and bitter man scowls at his cheerful nephew during Christmas."
+      },
+      "latency_seconds": 2.844
+    },
+    {
+      "id": "10_black_spot",
+      "status": "success",
+      "result_type": "AIAnalysis",
+      "response": {
+        "translation": "чёрная метка",
+        "context_meaning": "В романе «Остров сокровищ» чёрная метка символизирует угрозу со стороны пиратов. Получив её, человек должен ожидать нападения или расправы до указанного времени. В данном эпизоде главный герой находит такую метку рядом с рукой другого персонажа, подтверждая серьёзность опасности.",
+        "slang_or_etymology": null,
+        "image_prompt": "A man kneeling on the floor next to an outstretched hand, holding a small piece of blackened paper with writing on it."
+      },
+      "latency_seconds": 2.222
+    },
+    {
+      "id": "11_pieces_eight",
+      "status": "success",
+      "result_type": "AIAnalysis",
+      "response": {
+        "translation": "пиастры",
+        "context_meaning": "В данном контексте речь идет о разнообразии монет из сокровищ пиратов, среди которых упоминаются различные валюты разных стран, включая испанские монеты 'pieces of eight', известные как пиастры. Эти монеты были распространены в эпоху колониальных завоеваний и часто фигурируют в приключенческих романах о пиратах. Мать рассказчика пытается разобраться в этой мешанине валют, чтобы подсчитать стоимость найденных денег, но ей знакомее всего английские гинеи, которые оказываются самыми редкими в куче монет.",
+        "slang_or_etymology": null,
+        "image_prompt": "A woman sorting through a pile of mixed gold coins from different countries."
+      },
+      "latency_seconds": 2.886
+    },
+    {
+      "id": "12_dead_men",
+      "status": "success",
+      "result_type": "AIAnalysis",
+      "response": {
+        "translation": "Мёртвые не кусаются",
+        "context_meaning": "Персонаж выражает циничную позицию, согласно которой лучше действовать решительно и первым нанести удар, так как мёртвый противник уже не сможет причинить вреда. Это подчёркивает его опытность и практичность, накопленные за годы морских приключений. В данном контексте фраза служит аргументом в пользу решительных действий капитана Хокинса, чтобы завершить опасное предприятие и избежать дальнейших рисков.",
+        "slang_or_etymology": null,
+        "image_prompt": "A grizzled old seaman sternly advises a young captain on a ship's deck."
+      },
+      "latency_seconds": 2.948
+    },
+    {
+      "id": "13_by_hand",
+      "status": "success",
+      "result_type": "AIAnalysis",
+      "response": {
+        "translation": "своими силами, собственными руками",
+        "context_meaning": "В данном контексте фраза означает самостоятельное воспитание ребёнка без посторонней помощи, подчёркивая строгость и суровость методов воспитания старшей сестры рассказчика. Она гордится тем, что воспитала брата сама, часто прибегая к физическим наказаниям как по отношению к нему, так и к своему мужу Джо Гарджери.",
+        "slang_or_etymology": null,
+        "image_prompt": "A stern-looking woman standing over a young boy, holding him firmly."
+      },
+      "latency_seconds": 2.088
+    },
+    {
+      "id": "14_bolted",
+      "status": "success",
+      "result_type": "AIAnalysis",
+      "response": {
+        "translation": "Я убегал",
+        "context_meaning": "Джо вспоминает своё детство и говорит Пипу, что сам часто сбегал из дома, когда был мальчиком. Он подчёркивает, что никогда раньше не видел такого быстрого бегства, как у Пипа, и считает чудом, что тот остался живым после своих побегов.",
+        "slang_or_etymology": null,
+        "image_prompt": "A woman grabs a young boy's hair while an older man looks on."
+      },
+      "latency_seconds": 2.164
+    },
+    {
+      "id": "15_common_boy",
+      "status": "success",
+      "result_type": "AIAnalysis",
+      "response": {
+        "translation": "обычный мальчик из простонародья, занимающийся физическим трудом",
+        "context_meaning": "Эстелла презрительно реагирует на указание мисс Хэвишем поиграть в карты с Пипом, подчеркивая его низкое социальное положение и физическую работу как признак низкого статуса. Это подчёркивает классовые различия между персонажами и отношение Эстеллы к людям ниже её социального уровня.",
+        "slang_or_etymology": null,
+        "image_prompt": "A wealthy girl looks down on a working-class boy while an older woman watches them."
+      },
+      "latency_seconds": 2.766
+    }
+  ],
+  "completed_at_utc": "2026-10-17T06:58:08.374195+00:00"
+}

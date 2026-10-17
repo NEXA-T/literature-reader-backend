@@ -19,3 +19,9 @@ py -3 -m unittest discover -s tests -v
 
 Сервис возвращает строгий Pydantic-объект с полями контракта №11;
 подключение к FastAPI выполняется отдельно.
+
+## Литературный бенчмарк и иллюстрация (#26)
+
+[Таблица качества 15 реальных литературных тестов](benchmarks/literary/report.md).
+[Повторный запуск и методика](benchmarks/literary/README.md).
+[Сгенерированная иллюстрация](benchmarks/literary/illustration/scene.jpg).

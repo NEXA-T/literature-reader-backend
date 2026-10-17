@@ -15,3 +15,5 @@ build/
 .vscode/
 certs/
 evidence/
+
+benchmarks/literary/.cache/
