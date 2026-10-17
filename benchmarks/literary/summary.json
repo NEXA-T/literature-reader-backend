@@ -1,0 +1,14 @@
+{
+  "valid_structure": 15,
+  "cases": 15,
+  "verdicts": {
+    "correct": 5,
+    "partial": 8,
+    "incorrect": 2
+  },
+  "text_points": 64,
+  "max_text_points": 90,
+  "median_latency_seconds": 2.766,
+  "reviewer": "Оценка ассистентом после просмотра реальных ответов; не независимая экспертная разметка",
+  "scope": "15 English-language public-domain excerpts, 5 books, 4 authors; not multilingual or independent human-reviewed gold standard."
+}

@@ -1,0 +1,45 @@
+{
+  "timestamp_utc": "2026-10-17T07:00:30.640804+00:00",
+  "provider": "GigaChat built-in text2image",
+  "source_case_id": "01_tale_tail",
+  "source_image_prompt": "A mouse telling a story to Alice, emphasizing its long tail.",
+  "results_sha256": "99dff90ef4166ce27ca3df2238567c2bb1983828c52090595ad7e1848f89b09e",
+  "request_body": {
+    "model": "GigaChat-2-Max",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Создай одну иллюстрацию литературной сцены по описанию пользователя. Без надписей и водяных знаков. Используй встроенную генерацию изображений."
+      },
+      {
+        "role": "user",
+        "content": "Нарисуй иллюстрацию сцены по следующему описанию на английском:\nA mouse telling a story to Alice, emphasizing its long tail."
+      }
+    ],
+    "function_call": "auto"
+  },
+  "timeout_seconds": 180,
+  "parameters_not_exposed": [
+    "seed",
+    "width",
+    "height",
+    "diffusion_steps"
+  ],
+  "documentation": "https://developers.sber.ru/docs/ru/gigachat/guides/images-generation",
+  "status": "success",
+  "model_returned": "GigaChat-2-Max:2.0.28.2",
+  "generation_response": "<img src=\"5bd9b4c7-ba0f-4f21-8258-731d64dbf814\" fuse=\"true\"/> сделал иллюстрацию сцены, где мышь рассказывает историю Алисе, подчеркивая свой длинный хвост.",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 672,
+    "completion_tokens": 62,
+    "total_tokens": 734,
+    "precached_prompt_tokens": 1
+  },
+  "file_id": "5bd9b4c7-ba0f-4f21-8258-731d64dbf814",
+  "download_method": "GET",
+  "image_file": "scene.jpg",
+  "image_bytes": 123609,
+  "image_sha256": "9ed87df7c1e6117e939fd0185cf067b1eab58d1ad48e6b9642ca4b6aaf46da80",
+  "elapsed_seconds": 14.367
+}
