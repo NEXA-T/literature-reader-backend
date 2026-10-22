@@ -1,22 +1,20 @@
 from pydantic import BaseModel, Field, field_validator
 
-
 class ExplainRequest(BaseModel):
     selected_text: str = Field(
         ...,
-        description="Выделенный фрагмент: слово, фраза или идиома",
+        min_length=1,
+        max_length=200,
+        description="Выделенный фрагмент...",
         examples=["горе от ума"],
     )
     context: str = Field(
         ...,
-        description="Текст абзаца, в котором встретилась фраза",
-        examples=["Чацкий произносит монолог о том, что горе от ума..."],
+        max_length=1000,
+        description="Текст абзаца...",
+        examples=["Чацкий произносит монолог..."],
     )
-    book_title: str | None = Field(
-        None,
-        description="Название книги для понимания сеттинга и эпохи",
-        examples=["Горе от ума"],
-    )
+    book_title: str | None = Field(None, description="Название книги")
 
     @field_validator("selected_text", "context")
     @classmethod
