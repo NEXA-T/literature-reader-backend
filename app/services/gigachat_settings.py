@@ -19,7 +19,8 @@ class GigaChatSettings(BaseSettings):
     auth_url: str = "https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
     chat_url: str = "https://gigachat.devices.sberbank.ru/api/v1/chat/completions"
     ca_bundle: Path | None = None
-    timeout_seconds: float = Field(default=60, gt=0, le=180)
+    timeout_seconds: float = Field(default=8.0, gt=0, le=180)
+    cache_ttl_seconds: float = Field(default=300, ge=0, le=86400)
     max_attempts: int = Field(default=2, ge=1, le=3)
 
     @classmethod
