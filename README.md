@@ -48,3 +48,9 @@ py -3 -m unittest discover -s tests -v
 Для запуска бэкенда и ngrok-туннеля одной командой используйте:
 ```cmd
 run_demo.bat
+
+## Надёжность LLM и кэш (#35)
+
+[Общий таймаут 8 с, TTL-кэш, визуальный промпт и тесты](docs/llm-reliability-and-cache.md).
+[Замер реального вызова и кэша](docs/llm-cache-measurement.json).
+[Лог тестов](docs/llm-reliability-tests.txt).
