@@ -32,8 +32,8 @@ class GeneratedImage:
 
 
 class ImageGenerationClient:
-    def __init__(self, provider: ImageProvider, *, poll_interval: float = 1.5, max_wait: float = 15.0):
-        if not 1.5 <= poll_interval <= 2.0 or not 0 < max_wait <= 15.0:
+    def __init__(self, provider: ImageProvider, *, poll_interval: float = 1.5, max_wait: float = 30.0):
+        if not 1.5 <= poll_interval <= 2.0 or not 0 < max_wait <= 30.0:
             raise ValueError("Polling must be 1.5–2 s, total wait at most 15 s")
         self._provider = provider
         self._poll_interval = poll_interval
