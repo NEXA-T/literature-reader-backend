@@ -49,6 +49,11 @@ py -3 -m unittest discover -s tests -v
 ```cmd
 run_demo.bat
 
+## Надёжность LLM и кэш (#35)
+
+[Общий таймаут 8 с, TTL-кэш, визуальный промпт и тесты](docs/llm-reliability-and-cache.md).
+[Замер реального вызова и кэша](docs/llm-cache-measurement.json).
+[Лог тестов](docs/llm-reliability-tests.txt).
 ## Генерация книжных иллюстраций (#40)
 
 [ImageGenerationClient: polling, таймаут и fallback](docs/image-generation-client.md).

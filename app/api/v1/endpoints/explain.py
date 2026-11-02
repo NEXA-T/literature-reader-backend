@@ -5,6 +5,7 @@ from app.schemas.explain import ExplainRequest, ExplainResponse
 from app.services.explain_service import explain_text
 from app.services.gigachat_client import (
     GigaChatUnavailableError,
+    LLMTimeoutException,
     GigaChatResponseError,
     GigaChatConfigurationError
 )
@@ -20,6 +21,11 @@ async def explain(payload: ExplainRequest):
         return JSONResponse(
             status_code=503,
             content={"error": f"Ошибка конфигурации сервера: {str(e)}"}
+        )
+    except LLMTimeoutException:
+        return JSONResponse(
+            status_code=504,
+            content={"error": "Нейросеть не ответила за 8 секунд. Попробуйте ещё раз."}
         )
     except GigaChatUnavailableError as e:
         return JSONResponse(

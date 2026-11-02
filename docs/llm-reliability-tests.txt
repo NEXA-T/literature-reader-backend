@@ -1,0 +1,3 @@
+.uu.uuuuuu.uuu.uuuu.......................................................Artificial API delay 9s -> LLMTimeoutException in 8.004s; request cancelled
+........
+67 passed, 1 warning, 15 subtests passed in 9.36s

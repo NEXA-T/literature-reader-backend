@@ -1,0 +1,24 @@
+{
+  "timestamp_utc": "2026-10-27T14:05:11.912435+00:00",
+  "model_requested": "GigaChat-2-Max",
+  "deadline_seconds": 8.0,
+  "cache_ttl_seconds": 300,
+  "real_call_ms": 6785.967,
+  "real_api_requests_including_oauth": 2,
+  "cached_first_ms": 0.0799,
+  "cached_median_ms": 0.0231,
+  "cached_max_ms": 0.0799,
+  "cache_samples": 100,
+  "cached_api_requests": 0,
+  "cache_hits": 100,
+  "cached_median_below_5_ms": true,
+  "measurement_scope": "analyze_text only; client construction, HTTP round trip and server serialization excluded",
+  "result_type": "AIAnalysis",
+  "result": {
+    "translation": "взять себя в руки и признаться",
+    "context_meaning": "Элеанор три ночи откладывала признание отцу об утрате стипендии, понимая, что это будет неприятно. На завтрак она решилась набраться смелости и рассказать правду до того, как отец прочтёт письмо из университета.",
+    "slang_or_etymology": null,
+    "image_prompt": "A young woman tells her father something serious over breakfast"
+  },
+  "image_prompt_length": 63
+}

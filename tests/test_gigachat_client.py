@@ -23,7 +23,7 @@ VALID = {
 
 
 def settings(**overrides):
-    return GigaChatSettings(_env_file=None, auth_key=SecretStr("test-auth-secret"), **overrides)
+    return GigaChatSettings(_env_file=None, auth_key=SecretStr("test-auth-secret"), cache_ttl_seconds=0, **overrides)
 
 
 def token_response():

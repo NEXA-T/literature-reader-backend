@@ -11,7 +11,7 @@
 - `translation: str` — контекстный перевод;
 - `context_meaning: str` — смысл в абзаце;
 - `slang_or_etymology: str | None` — сленг/культурная отсылка или null;
-- `image_prompt: str | None` — английское описание сцены или null.
+- `image_prompt: str | None` — английское описание конкретной сцены до 150 символов или null.
 
 Все четыре ключа обязательны, включая nullable-поля. Типы строгие,
 дополнительные и старые поля запрещены. Пустые основные строки и строковые
@@ -75,16 +75,17 @@ GIGACHAT_CLIENT_SECRET=
 GIGACHAT_SCOPE=GIGACHAT_API_PERS
 GIGACHAT_MODEL=GigaChat-2-Max
 GIGACHAT_CA_BUNDLE=
-GIGACHAT_TIMEOUT_SECONDS=60
+GIGACHAT_TIMEOUT_SECONDS=8.0
 GIGACHAT_MAX_ATTEMPTS=2
 ```
 
 Задайте Authorization Key без `Basic` либо оба Client ID и Client Secret.
 `GIGACHAT_API_KEY` из старого mock не используется. URL при необходимости
 задаются через `GIGACHAT_AUTH_URL` и `GIGACHAT_CHAT_URL` (только HTTPS).
-Максимальное количество попыток настраивается от 1 до 3, таймаут — от 0 до
-180 секунд, не включая 0. Таймаут httpx ограничивает отдельные операции
-соединения/чтения/записи, а не весь метод со всеми повторными запросами.
+Максимальное количество попыток — от 1 до 3. По задаче №35 общий срок метода
+ограничен 8 секундами, включая OAuth и повторы; меньшая настройка допускается.
+Результаты кэшируются в памяти процесса с TTL 300 секунд.
+Подробности: [таймаут и кэш](llm-reliability-and-cache.md).
 
 При `GigaChatSettings.from_env_file(path)` относительный путь сертификата
 считается от каталога указанного `.env`. Существующие переменные окружения

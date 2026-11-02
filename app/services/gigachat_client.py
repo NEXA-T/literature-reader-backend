@@ -1,6 +1,7 @@
 """Isolated async GigaChat client. No FastAPI imports or endpoint changes."""
 import asyncio
 import base64
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -14,8 +15,13 @@ from pydantic import BaseModel, ConfigDict, SecretStr, ValidationError
 
 from app.schemas.ai_analysis import AIAnalysis, AnalysisInput
 from app.services.gigachat_settings import GigaChatSettings
+from app.services.analysis_cache import AnalysisCache, context_guard, request_hash
 
 SYSTEM_PROMPT = (Path(__file__).parent / "prompts/literary_analysis.txt").read_text(encoding="utf-8")
+
+
+LLM_TIMEOUT_SECONDS = 8.0
+_RESULT_CACHE = AnalysisCache()
 
 
 class GigaChatError(RuntimeError):
@@ -28,6 +34,10 @@ class GigaChatConfigurationError(GigaChatError):
 
 class GigaChatUnavailableError(GigaChatError):
     pass
+
+
+class LLMTimeoutException(GigaChatUnavailableError):
+    """The shared OAuth/generation/retry deadline or HTTP timeout expired."""
 
 
 class GigaChatResponseError(GigaChatError):
@@ -88,12 +98,32 @@ class GigaChatClient:
                 tls.load_verify_locations(cafile=str(self._settings.ca_bundle))
         except (OSError, ssl.SSLError):
             raise GigaChatConfigurationError("Не удалось загрузить сертификат GigaChat") from None
+        self._timeout = min(LLM_TIMEOUT_SECONDS, self._settings.timeout_seconds)
+        # Separate credentials/models/providers without retaining a plaintext key
+        # in cache identifiers. The request digest still uses the specified pair.
+        namespace_input = (
+            self._auth_key.get_secret_value(), self._settings.model, self._settings.scope,
+            self._settings.auth_url, self._settings.chat_url, SYSTEM_PROMPT,
+            self._settings.cache_ttl_seconds,
+        )
+        self._cache_namespace = hashlib.sha256(json.dumps(namespace_input).encode()).hexdigest()
         self._http = httpx.AsyncClient(
-            verify=tls, timeout=self._settings.timeout_seconds,
+            verify=tls, timeout=self._timeout,
             follow_redirects=False, transport=transport,
         )
         self._token: _Token | None = None
         self._token_lock = asyncio.Lock()
+        self._request_count = 0
+        self._cache_hits = 0
+
+    @property
+    def request_count(self) -> int:
+        """HTTP attempts sent by this instance, including OAuth."""
+        return self._request_count
+
+    @property
+    def cache_hits(self) -> int:
+        return self._cache_hits
 
     def _credentials(self) -> SecretStr:
         settings = self._settings
@@ -116,7 +146,10 @@ class GigaChatClient:
 
     async def _post(self, url: str, **kwargs: object) -> httpx.Response:
         try:
+            self._request_count += 1
             return await self._http.post(url, **kwargs)
+        except httpx.TimeoutException:
+            raise LLMTimeoutException("Нейросеть не ответила вовремя. Повторите запрос.") from None
         except httpx.RequestError:
             raise GigaChatUnavailableError("GigaChat недоступен или не ответил вовремя. Повторите позже.") from None
 
@@ -167,6 +200,27 @@ class GigaChatClient:
         self, selected_text: str, context: str, book_title: str | None = None,
     ) -> AIAnalysis:
         user_input = AnalysisInput(selected_text=selected_text, context=context, book_title=book_title)
+        key = request_hash(user_input.selected_text, user_input.context)
+        guard = context_guard(user_input.context, user_input.book_title)
+        if self._settings.cache_ttl_seconds > 0:
+            cached = _RESULT_CACHE.get(self._cache_namespace, key, guard)
+            if cached is not None:
+                self._cache_hits += 1
+                return cached
+        loop = asyncio.get_running_loop()
+        deadline = loop.time() + self._timeout
+        try:
+            # One wall-clock budget across OAuth, token lock and all retries.
+            async with asyncio.timeout(self._timeout):
+                result = await self._analyze_uncached(user_input)
+                if loop.time() >= deadline:
+                    raise TimeoutError
+        except TimeoutError:
+            raise LLMTimeoutException("Нейросеть не ответила вовремя. Повторите запрос.") from None
+        _RESULT_CACHE.put(self._cache_namespace, key, guard, result, self._settings.cache_ttl_seconds)
+        return result
+
+    async def _analyze_uncached(self, user_input: AnalysisInput) -> AIAnalysis:
         user_content = json.dumps(user_input.model_dump(exclude_none=True), ensure_ascii=False)
         for attempt in range(self._settings.max_attempts):
             prompt = SYSTEM_PROMPT
@@ -174,7 +228,8 @@ class GigaChatClient:
                 prompt += (
                     "\nПредыдущий ответ не прошёл проверку. Верни только полный JSON-объект "
                     "с четырьмя исходными полями и корректными типами, без лишних полей. "
-                    "Не используй текстовые заглушки вместо null. Анализируй исходный ввод."
+                    "Не используй текстовые заглушки вместо null. image_prompt: конкретная сцена "
+                    "на английском, максимум 150 символов, либо null. Анализируй исходный ввод."
                 )
             payload = {
                 "model": self._settings.model,

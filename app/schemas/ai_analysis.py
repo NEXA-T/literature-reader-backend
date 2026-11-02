@@ -24,7 +24,7 @@ class AIAnalysis(BaseModel):
     context_meaning: str = Field(min_length=1)
     # Required keys; JSON null is a valid value, absence is not.
     slang_or_etymology: str | None
-    image_prompt: str | None
+    image_prompt: str | None = Field(max_length=150)
 
     @field_validator("translation", "context_meaning")
     @classmethod
@@ -38,4 +38,14 @@ class AIAnalysis(BaseModel):
     def actual_null_not_placeholder(cls, value: str | None) -> str | None:
         if value is not None and value.strip().lower() in ("", "null", "none"):
             raise ValueError("use JSON null rather than a placeholder string")
+        return value
+
+    @field_validator("image_prompt")
+    @classmethod
+    def latin_scene_description(cls, value: str | None) -> str | None:
+        if value is not None:
+            if not any("a" <= char.lower() <= "z" for char in value):
+                raise ValueError("image_prompt must contain English scene text")
+            if any(char.isalpha() and not char.isascii() for char in value):
+                raise ValueError("image_prompt must use English/Latin letters")
         return value
