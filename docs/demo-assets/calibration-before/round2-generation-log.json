@@ -1,0 +1,106 @@
+{
+  "started_at_utc": "2026-10-27T14:47:47.205491+00:00",
+  "provider": "gigachat_text2image",
+  "model_requested": "GigaChat-2-Max",
+  "poll_interval_seconds": 1.5,
+  "interactive_client_max_wait_seconds": 15,
+  "max_wait_per_attempt_seconds": 90,
+  "mode": "offline_asset_preparation",
+  "offline_render_deadline_seconds": 90,
+  "system_prompt": "Создай одну атмосферную иллюстрацию литературной сцены по английскому описанию пользователя. Книжная иллюстрация, выразительный свет, чистая композиция, мягкие цвета, без натуралистического насилия и сексуального содержания. Покажи конкретных персонажей, предметы и действия. Не изображай переносную идиому буквально. Не добавляй неописанные опасные детали. Не включай в изображение текст, буквы, цифры, вывески, подписи, читаемые страницы, логотипы или водяные знаки. Книги и документы допустимы только закрытые либо с полностью пустыми страницами. При несовместимом запросе не обходи ограничения сервиса. Используй встроенную функцию text2image и верни изображение.\n",
+  "style_suffix": ", book illustration style, painterly watercolor and ink, cinematic lighting, no text, no letters, no numbers, no writing, no watermark",
+  "cases": [
+    {
+      "id": "01_tale_tail",
+      "idiom": "long tail",
+      "attempts": [
+        {
+          "is_fallback": false,
+          "reason": null,
+          "elapsed_seconds": 21.125,
+          "polling_checks": 15,
+          "effective_prompt": "A human child in a blue pinafore sits beside a tiny grey mouse at a natural woodland pond, book illustration style, painterly watercolor and ink, cinematic lighting, no text, no letters, no numbers, no writing, no watermark"
+        }
+      ],
+      "image_file": "01_tale_tail.jpg",
+      "media_type": "image/jpeg",
+      "is_fallback": false,
+      "sha256": "17897a2b0ee19b1b66634af9fa7315247ee4e34038a5a681b155380151ee6e63",
+      "bytes": 152700
+    },
+    {
+      "id": "06_fine_eyes",
+      "idiom": "fine eyes",
+      "attempts": [
+        {
+          "is_fallback": false,
+          "reason": null,
+          "elapsed_seconds": 21.141,
+          "polling_checks": 15,
+          "effective_prompt": "Two adults in Regency clothing face one another in a softly lit drawing room with blank walls, book illustration style, painterly watercolor and ink, cinematic lighting, no text, no letters, no numbers, no writing, no watermark"
+        }
+      ],
+      "image_file": "06_fine_eyes.jpg",
+      "media_type": "image/jpeg",
+      "is_fallback": false,
+      "sha256": "266902e0cc86b5f478c83466c93e07a670efb8ddaef14029558ec124499aa90c",
+      "bytes": 115606
+    },
+    {
+      "id": "07_door_nail",
+      "idiom": "dead as a door-nail",
+      "attempts": [
+        {
+          "is_fallback": false,
+          "reason": null,
+          "elapsed_seconds": 28.687,
+          "polling_checks": 20,
+          "effective_prompt": "Two chairs at a bare wooden desk, one empty and one occupied by an elderly Victorian merchant, book illustration style, painterly watercolor and ink, cinematic lighting, no text, no letters, no numbers, no writing, no watermark"
+        }
+      ],
+      "image_file": "07_door_nail.jpg",
+      "media_type": "image/jpeg",
+      "is_fallback": false,
+      "sha256": "99bb306568b8b193d082aca59481c598ab0e4bacefee27b8df65b652db25a755",
+      "bytes": 143957
+    },
+    {
+      "id": "09_humbug",
+      "idiom": "Humbug",
+      "attempts": [
+        {
+          "is_fallback": false,
+          "reason": null,
+          "elapsed_seconds": 25.656,
+          "polling_checks": 18,
+          "effective_prompt": "A stern elderly man scowls at a smiling adult nephew across a bare office desk, book illustration style, painterly watercolor and ink, cinematic lighting, no text, no letters, no numbers, no writing, no watermark"
+        }
+      ],
+      "image_file": "09_humbug.jpg",
+      "media_type": "image/jpeg",
+      "is_fallback": false,
+      "sha256": "57a799ab887a947cf810c6d95156d3c434592cd908d3b9796b15111144d9f7df",
+      "bytes": 88701
+    },
+    {
+      "id": "15_common_boy",
+      "idiom": "common labouring-boy",
+      "attempts": [
+        {
+          "is_fallback": false,
+          "reason": null,
+          "elapsed_seconds": 19.594,
+          "polling_checks": 14,
+          "effective_prompt": "Two children, a richly dressed girl and a plainly dressed boy, at a table with plain face-down cards, book illustration style, painterly watercolor and ink, cinematic lighting, no text, no letters, no numbers, no writing, no watermark"
+        }
+      ],
+      "image_file": "15_common_boy.jpg",
+      "media_type": "image/jpeg",
+      "is_fallback": false,
+      "sha256": "1aa56934a60107d70285154e6257f566c981bafbc869a320213cf072acbed976",
+      "bytes": 129874
+    }
+  ],
+  "completed_at_utc": "2026-10-27T14:49:43.405861+00:00",
+  "generated_count": 5
+}

@@ -1,0 +1,172 @@
+{
+  "started_at_utc": "2026-10-27T14:38:37.113399+00:00",
+  "provider": "gigachat_text2image",
+  "model_requested": "GigaChat-2-Max",
+  "poll_interval_seconds": 1.5,
+  "max_wait_per_attempt_seconds": 15,
+  "style_suffix": ", book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark",
+  "cases": [
+    {
+      "id": "01_tale_tail",
+      "idiom": "long tail",
+      "attempts": [
+        {
+          "is_fallback": true,
+          "reason": "timeout",
+          "elapsed_seconds": 15.016,
+          "polling_checks": 10,
+          "effective_prompt": "Alice listens to a small mouse beside a shallow pool in soft daylight, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        },
+        {
+          "is_fallback": true,
+          "reason": "timeout",
+          "elapsed_seconds": 15.015,
+          "polling_checks": 10,
+          "effective_prompt": "Alice listens to a small mouse beside a shallow pool in soft daylight, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        },
+        {
+          "is_fallback": true,
+          "reason": "timeout",
+          "elapsed_seconds": 15.016,
+          "polling_checks": 10,
+          "effective_prompt": "Alice listens to a small mouse beside a shallow pool in soft daylight, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        }
+      ],
+      "image_file": "01_tale_tail.svg",
+      "media_type": "image/svg+xml",
+      "is_fallback": true,
+      "sha256": "8f65ab58bceb767938f5401d71888ec9f16f73a2cc6e3443d9f249e233203a51",
+      "bytes": 1134
+    },
+    {
+      "id": "06_fine_eyes",
+      "idiom": "fine eyes",
+      "attempts": [
+        {
+          "is_fallback": true,
+          "reason": "timeout",
+          "elapsed_seconds": 15.0,
+          "polling_checks": 10,
+          "effective_prompt": "Two elegantly dressed adults exchange a restrained remark in a Regency drawing room, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        },
+        {
+          "is_fallback": true,
+          "reason": "timeout",
+          "elapsed_seconds": 15.0,
+          "polling_checks": 10,
+          "effective_prompt": "Two elegantly dressed adults exchange a restrained remark in a Regency drawing room, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        },
+        {
+          "is_fallback": true,
+          "reason": "provider_http_error",
+          "elapsed_seconds": 1.5,
+          "polling_checks": 1,
+          "effective_prompt": "Two elegantly dressed adults exchange a restrained remark in a Regency drawing room, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        }
+      ],
+      "image_file": "06_fine_eyes.svg",
+      "media_type": "image/svg+xml",
+      "is_fallback": true,
+      "sha256": "8f65ab58bceb767938f5401d71888ec9f16f73a2cc6e3443d9f249e233203a51",
+      "bytes": 1134
+    },
+    {
+      "id": "07_door_nail",
+      "idiom": "dead as a door-nail",
+      "attempts": [
+        {
+          "is_fallback": true,
+          "reason": "timeout",
+          "elapsed_seconds": 15.016,
+          "polling_checks": 10,
+          "effective_prompt": "A solitary Victorian merchant sits beside an empty chair in a quiet counting-house, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        },
+        {
+          "is_fallback": true,
+          "reason": "timeout",
+          "elapsed_seconds": 15.016,
+          "polling_checks": 10,
+          "effective_prompt": "A solitary Victorian merchant sits beside an empty chair in a quiet counting-house, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        },
+        {
+          "is_fallback": true,
+          "reason": "timeout",
+          "elapsed_seconds": 15.015,
+          "polling_checks": 10,
+          "effective_prompt": "A solitary Victorian merchant sits beside an empty chair in a quiet counting-house, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        }
+      ],
+      "image_file": "07_door_nail.svg",
+      "media_type": "image/svg+xml",
+      "is_fallback": true,
+      "sha256": "8f65ab58bceb767938f5401d71888ec9f16f73a2cc6e3443d9f249e233203a51",
+      "bytes": 1134
+    },
+    {
+      "id": "09_humbug",
+      "idiom": "Humbug",
+      "attempts": [
+        {
+          "is_fallback": true,
+          "reason": "timeout",
+          "elapsed_seconds": 15.016,
+          "polling_checks": 10,
+          "effective_prompt": "An elderly Victorian uncle frowns while his cheerful nephew offers a Christmas greeting, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        },
+        {
+          "is_fallback": true,
+          "reason": "timeout",
+          "elapsed_seconds": 15.015,
+          "polling_checks": 10,
+          "effective_prompt": "An elderly Victorian uncle frowns while his cheerful nephew offers a Christmas greeting, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        },
+        {
+          "is_fallback": true,
+          "reason": "timeout",
+          "elapsed_seconds": 15.016,
+          "polling_checks": 10,
+          "effective_prompt": "An elderly Victorian uncle frowns while his cheerful nephew offers a Christmas greeting, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        }
+      ],
+      "image_file": "09_humbug.svg",
+      "media_type": "image/svg+xml",
+      "is_fallback": true,
+      "sha256": "8f65ab58bceb767938f5401d71888ec9f16f73a2cc6e3443d9f249e233203a51",
+      "bytes": 1134
+    },
+    {
+      "id": "15_common_boy",
+      "idiom": "common labouring-boy",
+      "attempts": [
+        {
+          "is_fallback": true,
+          "reason": "timeout",
+          "elapsed_seconds": 15.0,
+          "polling_checks": 10,
+          "effective_prompt": "A richly dressed girl looks away from a plainly dressed boy beside a card table, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        },
+        {
+          "is_fallback": true,
+          "reason": "timeout",
+          "elapsed_seconds": 15.016,
+          "polling_checks": 10,
+          "effective_prompt": "A richly dressed girl looks away from a plainly dressed boy beside a card table, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        },
+        {
+          "is_fallback": true,
+          "reason": "timeout",
+          "elapsed_seconds": 15.016,
+          "polling_checks": 10,
+          "effective_prompt": "A richly dressed girl looks away from a plainly dressed boy beside a card table, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        }
+      ],
+      "image_file": "15_common_boy.svg",
+      "media_type": "image/svg+xml",
+      "is_fallback": true,
+      "sha256": "8f65ab58bceb767938f5401d71888ec9f16f73a2cc6e3443d9f249e233203a51",
+      "bytes": 1134
+    }
+  ],
+  "completed_at_utc": "2026-10-27T14:42:08.839661+00:00",
+  "generated_count": 0
+}

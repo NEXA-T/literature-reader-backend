@@ -54,3 +54,11 @@ run_demo.bat
 [Общий таймаут 8 с, TTL-кэш, визуальный промпт и тесты](docs/llm-reliability-and-cache.md).
 [Замер реального вызова и кэша](docs/llm-cache-measurement.json).
 [Лог тестов](docs/llm-reliability-tests.txt).
+## Генерация книжных иллюстраций (#40)
+
+[ImageGenerationClient: polling, таймаут и fallback](docs/image-generation-client.md).
+[Пять реальных иллюстраций и калибровка](docs/demo-assets/README.md).
+
+Рабочее ожидание ограничено 15 секундами. На проверенном провайдере
+генерация длится дольше, поэтому демонстрационные арты подготовлены
+отдельно в явно обозначенном офлайн-режиме.

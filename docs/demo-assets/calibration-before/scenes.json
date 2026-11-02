@@ -1,0 +1,102 @@
+[
+  {
+    "id": "01_tale_tail",
+    "selected_text": "long tail",
+    "book_title": "Alice’s Adventures in Wonderland",
+    "context": "“Mine is a long and a sad tale!” said the Mouse, turning to Alice, and sighing.\n\n“It _is_ a long tail, certainly,” said Alice, looking down with wonder at the Mouse’s tail; “but why do you call it sad?” And she kept on puzzling about it while the Mouse was speaking, so that her idea of the tale was something like this:—",
+    "source": {
+      "url": "https://www.gutenberg.org/cache/epub/11/pg11.txt",
+      "reading_url": "https://www.gutenberg.org/ebooks/11",
+      "chapter": "Chapter III",
+      "paragraph_indices_zero_based": [
+        105,
+        106
+      ],
+      "source_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+      "context_sha256": "5a0752162467fc0254ad21a0dd8e5a7bcee0b7da8a4ad0d4560d90f7904d1383"
+    },
+    "benchmark_image_prompt": "A mouse telling a story to Alice, emphasizing its long tail.",
+    "calibrated_scene": "Alice listens to a small mouse beside a shallow pool in soft daylight.",
+    "calibration_method": "Manually grounded in the novel/scene for book illustration; not claimed to be unedited LLM output."
+  },
+  {
+    "id": "06_fine_eyes",
+    "selected_text": "fine eyes",
+    "book_title": "Pride and Prejudice",
+    "context": "“Certainly not.”\n\n“To walk three miles, or four miles, or five miles, or whatever it is, above her ancles in dirt, and alone, quite alone! what could she mean by it? It seems to me to show an abominable sort of conceited independence, a most country-town indifference to decorum.”\n\n“It shows an affection for her sister that is very pleasing,” said Bingley.\n\n“I am afraid, Mr. Darcy,” observed Miss Bingley, in a half whisper, “that this adventure has rather affected your admiration of her fine eyes.”\n\n“Not at all,” he replied: “they were brightened by the exercise.” A short pause followed this speech, and Mrs. Hurst began again,--",
+    "source": {
+      "url": "https://www.gutenberg.org/cache/epub/1342/pg1342.txt",
+      "reading_url": "https://www.gutenberg.org/ebooks/1342",
+      "chapter": "Chapter VIII",
+      "paragraph_indices_zero_based": [
+        426,
+        430
+      ],
+      "source_sha256": "3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75",
+      "context_sha256": "24a556b9ed6c52220112c3625bf653ace34fefac0005627c32db0fb72945cc24"
+    },
+    "benchmark_image_prompt": "A woman with bright eyes walking through muddy terrain.",
+    "calibrated_scene": "Two elegantly dressed adults exchange a restrained remark in a Regency drawing room.",
+    "calibration_method": "Manually grounded in the novel/scene for book illustration; not claimed to be unedited LLM output."
+  },
+  {
+    "id": "07_door_nail",
+    "selected_text": "dead as a door-nail",
+    "book_title": "A Christmas Carol",
+    "context": "MARLEY was dead: to begin with. There is no doubt whatever about that. The register of his burial was signed by the clergyman, the clerk, the undertaker, and the chief mourner. Scrooge signed it: and Scrooge's name was good upon 'Change, for anything he chose to put his hand to. Old Marley was as dead as a door-nail.\n\nMind! I don't mean to say that I know, of my own knowledge, what there is particularly dead about a door-nail. I might have been inclined, myself, to regard a coffin-nail as the deadest piece of ironmongery in the trade. But the wisdom of our ancestors is in the simile; and my unhallowed hands shall not disturb it, or the Country's done for. You will therefore permit me to repeat, emphatically, that Marley was as dead as a door-nail.",
+    "source": {
+      "url": "https://www.gutenberg.org/cache/epub/46/pg46.txt",
+      "reading_url": "https://www.gutenberg.org/ebooks/46",
+      "chapter": "Stave I",
+      "paragraph_indices_zero_based": [
+        19,
+        20
+      ],
+      "source_sha256": "8c36b93723d454982df045ec0efdf2664e5a48e6b5e2f670e883575f75ad0cc8",
+      "context_sha256": "63a545fb0fd61a4739b79131cb588da93ce93bc55458ccc57d2d149c2e4b3ccf"
+    },
+    "benchmark_image_prompt": "An old-fashioned door with an ornate nail prominently displayed.",
+    "calibrated_scene": "A solitary Victorian merchant sits beside an empty chair in a quiet counting-house.",
+    "calibration_method": "Manually grounded in the novel/scene for book illustration; not claimed to be unedited LLM output."
+  },
+  {
+    "id": "09_humbug",
+    "selected_text": "Humbug",
+    "book_title": "A Christmas Carol",
+    "context": "\"A merry Christmas, uncle! God save you!\" cried a cheerful voice. It was the voice of Scrooge's nephew, who came upon him so quickly that this was the first intimation he had of his approach.\n\n\"Bah!\" said Scrooge, \"Humbug!\"\n\nHe had so heated himself with rapid walking in the fog and frost, this nephew of Scrooge's, that he was all in a glow; his face was ruddy and handsome; his eyes sparkled, and his breath smoked again.\n\n\"Christmas a humbug, uncle!\" said Scrooge's nephew. \"You don't mean that, I am sure?\"\n\n\"I do,\" said Scrooge. \"Merry Christmas! What right have you to be merry? What reason have you to be merry? You're poor enough.\"",
+    "source": {
+      "url": "https://www.gutenberg.org/cache/epub/46/pg46.txt",
+      "reading_url": "https://www.gutenberg.org/ebooks/46",
+      "chapter": "Stave I",
+      "paragraph_indices_zero_based": [
+        30,
+        34
+      ],
+      "source_sha256": "8c36b93723d454982df045ec0efdf2664e5a48e6b5e2f670e883575f75ad0cc8",
+      "context_sha256": "e444a5074c221b6b571b99246b837ed2cabbb1fcfa91341e0f68deed78b2007c"
+    },
+    "benchmark_image_prompt": "A cold and bitter man scowls at his cheerful nephew during Christmas.",
+    "calibrated_scene": "An elderly Victorian uncle frowns while his cheerful nephew offers a Christmas greeting.",
+    "calibration_method": "Manually grounded in the novel/scene for book illustration; not claimed to be unedited LLM output."
+  },
+  {
+    "id": "15_common_boy",
+    "selected_text": "common labouring-boy",
+    "book_title": "Great Expectations",
+    "context": "Miss Havisham beckoned her to come close, and took up a jewel from the table, and tried its effect upon her fair young bosom and against her pretty brown hair. “Your own, one day, my dear, and you will use it well. Let me see you play cards with this boy.”\n\n“With this boy? Why, he is a common labouring-boy!”\n\nI thought I overheard Miss Havisham answer,—only it seemed so unlikely,—“Well? You can break his heart.”\n\n“What do you play, boy?” asked Estella of myself, with the greatest disdain.",
+    "source": {
+      "url": "https://www.gutenberg.org/cache/epub/1400/pg1400.txt",
+      "reading_url": "https://www.gutenberg.org/ebooks/1400",
+      "chapter": "Chapter VIII",
+      "paragraph_indices_zero_based": [
+        465,
+        468
+      ],
+      "source_sha256": "9a637118af8e953e9764ec603d9b0a032883384d465acac2e27966a80cf1c6f8",
+      "context_sha256": "0eb6bb3b50d4588d48c62f6d833146ce507baf3cdc329a35a310ed4523ffd304"
+    },
+    "benchmark_image_prompt": "A wealthy girl looks down on a working-class boy while an older woman watches them.",
+    "calibrated_scene": "A richly dressed girl looks away from a plainly dressed boy beside a card table.",
+    "calibration_method": "Manually grounded in the novel/scene for book illustration; not claimed to be unedited LLM output."
+  }
+]
