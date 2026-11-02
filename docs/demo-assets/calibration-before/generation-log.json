@@ -1,0 +1,105 @@
+{
+  "started_at_utc": "2026-10-27T14:44:00.439678+00:00",
+  "provider": "gigachat_text2image",
+  "model_requested": "GigaChat-2-Max",
+  "poll_interval_seconds": 1.5,
+  "max_wait_per_attempt_seconds": 15,
+  "mode": "offline_asset_preparation",
+  "offline_render_deadline_seconds": 90,
+  "system_prompt": "Создай одну атмосферную иллюстрацию литературной сцены по английскому описанию пользователя. Книжная иллюстрация, выразительный свет, чистая композиция, мягкие цвета, без натуралистического насилия и сексуального содержания. Покажи конкретных персонажей, предметы и действия. Не изображай переносную идиому буквально. Не добавляй неописанные опасные детали. Не включай в изображение текст, буквы, цифры, вывески, подписи, читаемые страницы, логотипы или водяные знаки. Книги и документы допустимы только закрытые либо с полностью пустыми страницами. При несовместимом запросе не обходи ограничения сервиса. Используй встроенную функцию text2image и верни изображение.\n",
+  "style_suffix": ", book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark",
+  "cases": [
+    {
+      "id": "01_tale_tail",
+      "idiom": "long tail",
+      "attempts": [
+        {
+          "is_fallback": false,
+          "reason": null,
+          "elapsed_seconds": 30.125,
+          "polling_checks": 21,
+          "effective_prompt": "Alice listens to a small mouse beside a shallow pool in soft daylight, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        }
+      ],
+      "image_file": "01_tale_tail.jpg",
+      "media_type": "image/jpeg",
+      "is_fallback": false,
+      "sha256": "b616803e49b65ab4b631bb0dfc2f1c57603cf0cd2273bef9c9fb1085e328b985",
+      "bytes": 68741
+    },
+    {
+      "id": "06_fine_eyes",
+      "idiom": "fine eyes",
+      "attempts": [
+        {
+          "is_fallback": false,
+          "reason": null,
+          "elapsed_seconds": 25.641,
+          "polling_checks": 18,
+          "effective_prompt": "Two elegantly dressed adults exchange a restrained remark in a Regency drawing room, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        }
+      ],
+      "image_file": "06_fine_eyes.jpg",
+      "media_type": "image/jpeg",
+      "is_fallback": false,
+      "sha256": "24f33f46ffd24ca080538b2cac1b5f5591d9db200788239aa6cb896242ec0cbe",
+      "bytes": 104395
+    },
+    {
+      "id": "07_door_nail",
+      "idiom": "dead as a door-nail",
+      "attempts": [
+        {
+          "is_fallback": false,
+          "reason": null,
+          "elapsed_seconds": 24.125,
+          "polling_checks": 17,
+          "effective_prompt": "A solitary Victorian merchant sits beside an empty chair in a quiet counting-house, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        }
+      ],
+      "image_file": "07_door_nail.jpg",
+      "media_type": "image/jpeg",
+      "is_fallback": false,
+      "sha256": "6c414cbce6b57406bb65151b1a5a98dfff3a65e11df33638973a5105352e0b65",
+      "bytes": 190836
+    },
+    {
+      "id": "09_humbug",
+      "idiom": "Humbug",
+      "attempts": [
+        {
+          "is_fallback": false,
+          "reason": null,
+          "elapsed_seconds": 18.094,
+          "polling_checks": 13,
+          "effective_prompt": "An elderly Victorian uncle frowns while his cheerful nephew offers a Christmas greeting, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        }
+      ],
+      "image_file": "09_humbug.jpg",
+      "media_type": "image/jpeg",
+      "is_fallback": false,
+      "sha256": "1b2a937578aa0e57b37c2ecf6f55d5c57dd6ba61ec12ebd7430ccd319e1829cf",
+      "bytes": 134282
+    },
+    {
+      "id": "15_common_boy",
+      "idiom": "common labouring-boy",
+      "attempts": [
+        {
+          "is_fallback": false,
+          "reason": null,
+          "elapsed_seconds": 25.64,
+          "polling_checks": 18,
+          "effective_prompt": "A richly dressed girl looks away from a plainly dressed boy beside a card table, book illustration style, detailed digital art, cinematic lighting, no text, no letters, no watermark"
+        }
+      ],
+      "image_file": "15_common_boy.jpg",
+      "media_type": "image/jpeg",
+      "is_fallback": false,
+      "sha256": "a02a4a42b47bfbd6e4504bb3cd6bbed28f7a2ca0d8c066f44fd004ee04f329bd",
+      "bytes": 109692
+    }
+  ],
+  "completed_at_utc": "2026-10-27T14:46:04.065805+00:00",
+  "generated_count": 5
+}
