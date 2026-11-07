@@ -6,6 +6,7 @@ from app.services.gigachat_settings import GigaChatSettings
 from app.services.image_provider import GigaChatImageProvider
 from app.services.image_generation_client import ImageGenerationClient
 from app.schemas.generate_image import GenerateImageRequest, GenerateImageResponse
+from app.services.image_cache import _IMAGE_CACHE
 
 
 UPLOAD_DIR = Path("static/generated_images")
@@ -21,9 +22,18 @@ async def generate_image(payload: GenerateImageRequest) -> GenerateImageResponse
     if payload.style:
         final_prompt += f", style: {payload.style}"
 
-    start_time = time.perf_counter()
+    cached = _IMAGE_CACHE.get(final_prompt)
+    if cached:
+        logger.info(f"Image generation: CACHE HIT | prompt='{final_prompt[:30]}...'")
+        return GenerateImageResponse(
+            image_url=cached.image_url,
+            prompt_used=cached.prompt_used
+        )
 
-    async with ImageGenerationClient(provider) as client:
+    start_time = time.perf_counter()
+    logger.info(f"Starting GigaChat generation for prompt: '{final_prompt[:30]}...'")
+
+    async with ImageGenerationClient(provider, max_wait=40.0) as client:
         result = await client.generate(final_prompt)
 
     duration_ms = (time.perf_counter() - start_time) * 1000
@@ -44,6 +54,11 @@ async def generate_image(payload: GenerateImageRequest) -> GenerateImageResponse
     filename = f"img_{uuid.uuid4().hex}.{extension}"
     file_path = UPLOAD_DIR / filename
     file_path.write_bytes(result.content)
+
+    image_url = f"/static/generated_images/{filename}"
+
+    if not result.is_fallback:
+        _IMAGE_CACHE.put(final_prompt, image_url, final_prompt)
 
     return GenerateImageResponse(
         image_url=f"/static/generated_images/{filename}",
