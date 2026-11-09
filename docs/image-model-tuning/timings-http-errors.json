@@ -1,0 +1,50 @@
+[
+  {
+    "scene": "07_door_nail",
+    "model": "GigaChat-2-Max",
+    "seconds": 1.579,
+    "fallback": true,
+    "reason": "provider_http_error",
+    "image": null,
+    "http_seconds": {
+      "oauth": 0.531,
+      "chat_completions": 0.573
+    }
+  },
+  {
+    "scene": "07_door_nail",
+    "model": "GigaChat-2",
+    "seconds": 1.519,
+    "fallback": true,
+    "reason": "provider_http_error",
+    "image": null,
+    "http_seconds": {
+      "oauth": 0.444,
+      "chat_completions": 0.569
+    }
+  },
+  {
+    "scene": "15_common_boy",
+    "model": "GigaChat-2",
+    "seconds": 1.515,
+    "fallback": true,
+    "reason": "provider_http_error",
+    "image": null,
+    "http_seconds": {
+      "oauth": 0.429,
+      "chat_completions": 0.579
+    }
+  },
+  {
+    "scene": "15_common_boy",
+    "model": "GigaChat-2-Max",
+    "seconds": 1.524,
+    "fallback": true,
+    "reason": "provider_http_error",
+    "image": null,
+    "http_seconds": {
+      "oauth": 0.429,
+      "chat_completions": 0.583
+    }
+  }
+]

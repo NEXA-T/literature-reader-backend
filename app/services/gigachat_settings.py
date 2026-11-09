@@ -16,6 +16,7 @@ class GigaChatSettings(BaseSettings):
     client_secret: SecretStr | None = None
     scope: str = "GIGACHAT_API_PERS"
     model: str = "GigaChat-2-Max"
+    image_model: str = "GigaChat-2"
     auth_url: str = "https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
     chat_url: str = "https://gigachat.devices.sberbank.ru/api/v1/chat/completions"
     ca_bundle: Path | None = None
