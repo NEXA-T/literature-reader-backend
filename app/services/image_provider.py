@@ -71,6 +71,7 @@ class GigaChatImageProvider:
 
     def __init__(self, settings: GigaChatSettings, *, transport: httpx.AsyncBaseTransport | None = None):
         self.settings = settings
+        self.model = settings.image_model
         self._transport = transport
         self._http: httpx.AsyncClient | None = None
         self._jobs: dict[str, asyncio.Task] = {}
@@ -151,7 +152,7 @@ class GigaChatImageProvider:
             headers = {"Authorization": "Bearer " + token}
             response = await self._http_client().post(
                 self.settings.chat_url, headers=headers,
-                json={"model": self.settings.model, "messages": [
+                json={"model": self.model, "messages": [
                     {"role": "system", "content": IMAGE_SYSTEM_PROMPT},
                     {"role": "user", "content": "Нарисуй книжную иллюстрацию: " + prompt},
                 ], "function_call": "auto"},

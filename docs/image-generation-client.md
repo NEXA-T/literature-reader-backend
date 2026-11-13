@@ -15,7 +15,7 @@ from app.services.image_provider import GigaChatImageProvider
 from app.services.image_generation_client import ImageGenerationClient
 
 settings = GigaChatSettings.from_env_file(".env")
-settings.model = "GigaChat-2-Max"
+settings.image_model = "GigaChat-2-Max"
 async with ImageGenerationClient(GigaChatImageProvider(settings)) as client:
     art = await client.generate("An elderly uncle greets his cheerful nephew in a Victorian office.")
     # art.content: bytes; art.media_type: image/jpeg, image/png или image/svg+xml

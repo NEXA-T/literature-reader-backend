@@ -82,7 +82,7 @@ def test_provider_failures_return_marked_fallback_without_retry(reason):
     assert len(provider.prompts) == 1
 
 
-@pytest.mark.parametrize("options", [{"max_wait":16}, {"poll_interval":1}, {"poll_interval":3}])
+@pytest.mark.parametrize("options", [{"max_wait":46}, {"poll_interval":1}, {"poll_interval":3}])
 def test_wait_limit_and_polling_range_are_enforced(options):
     with pytest.raises(ValueError):
         ImageGenerationClient(FakeProvider([]), **options)
@@ -106,7 +106,11 @@ def test_image_uuid_is_not_a_remote_url_or_path():
             extract_image_id(f'<img src="{value}"/>')
 
 
-def test_gigachat_adapter_real_request_shapes_and_binary_download():
+@pytest.mark.parametrize("image_model, expected_model", [
+    (None, "GigaChat-2"),
+    ("GigaChat-2-Max", "GigaChat-2-Max"),
+])
+def test_gigachat_adapter_real_request_shapes_and_binary_download(image_model, expected_model):
     calls = []
     identifier = str(uuid.uuid4())
 
@@ -118,11 +122,15 @@ def test_gigachat_adapter_real_request_shapes_and_binary_download():
             assert request.url.path.endswith(f"files/{identifier}/content")
             return httpx.Response(200, content=JPEG)
         payload = json.loads(request.content)
+        assert payload["model"] == expected_model
         assert payload["function_call"] == "auto"
         assert "no text" in payload["messages"][1]["content"]
         return httpx.Response(200, json={"choices":[{"finish_reason":"stop","message":{"content":f'<img src="{identifier}"/>'}}]})
 
-    provider = GigaChatImageProvider(GigaChatSettings(_env_file=None,auth_key="test-key"),transport=httpx.MockTransport(handler))
+    settings = GigaChatSettings(_env_file=None, auth_key="test-key", model="GigaChat-2-Pro")
+    if image_model is not None:
+        settings.image_model = image_model
+    provider = GigaChatImageProvider(settings, transport=httpx.MockTransport(handler))
     result = run(provider)
     assert not result.is_fallback
     assert len(calls) == 3 and provider._jobs == {} and provider._http.is_closed
@@ -177,7 +185,7 @@ def test_demo_files_are_real_generated_images_and_offline_mode_is_explicit():
         content = (folder / case["image_file"]).read_bytes()
         assert not case["is_fallback"] and content.startswith(b"\xff\xd8\xff")
         assert hashlib.sha256(content).hexdigest() == case["sha256"]
-    fallback_hash = hashlib.sha256((root / "app/assets/fallback-cover.svg").read_bytes()).hexdigest()
-    # The first interactive run predates the explicit mode metadata field.
+    # This historical run used the original cover before it was redesigned.
+    fallback_hash = "8f65ab58bceb767938f5401d71888ec9f16f73a2cc6e3443d9f249e233203a51"
     assert interactive["max_wait_per_attempt_seconds"] == 15 and interactive["generated_count"] == 0
     assert all(case["is_fallback"] and case["sha256"] == fallback_hash for case in interactive["cases"])

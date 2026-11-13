@@ -22,7 +22,8 @@ async def generate_image(payload: GenerateImageRequest) -> GenerateImageResponse
     if payload.style:
         final_prompt += f", style: {payload.style}"
 
-    cached = _IMAGE_CACHE.get(final_prompt)
+    cache_key = f"{provider.model}\0{final_prompt}"
+    cached = _IMAGE_CACHE.get(cache_key)
     if cached:
         logger.info(f"Image generation: CACHE HIT | prompt='{final_prompt[:30]}...'")
         return GenerateImageResponse(
@@ -58,7 +59,7 @@ async def generate_image(payload: GenerateImageRequest) -> GenerateImageResponse
     image_url = f"/static/generated_images/{filename}"
 
     if not result.is_fallback:
-        _IMAGE_CACHE.put(final_prompt, image_url, final_prompt)
+        _IMAGE_CACHE.put(cache_key, image_url, final_prompt)
 
     return GenerateImageResponse(
         image_url=f"/static/generated_images/{filename}",

@@ -1,0 +1,74 @@
+[
+  {
+    "scene": "01_tale_tail",
+    "model": "GigaChat-2-Max",
+    "seconds": 22.627,
+    "fallback": false,
+    "reason": null,
+    "image": "01_tale_tail_GigaChat-2-Max.jpg"
+  },
+  {
+    "scene": "01_tale_tail",
+    "model": "GigaChat-2-Pro",
+    "seconds": 39.992,
+    "fallback": true,
+    "reason": "timeout",
+    "image": null
+  },
+  {
+    "scene": "01_tale_tail",
+    "model": "GigaChat-2",
+    "seconds": 21.119,
+    "fallback": false,
+    "reason": null,
+    "image": "01_tale_tail_GigaChat-2.jpg"
+  },
+  {
+    "scene": "06_fine_eyes",
+    "model": "GigaChat-2-Pro",
+    "seconds": 40.022,
+    "fallback": true,
+    "reason": "timeout",
+    "image": null
+  },
+  {
+    "scene": "06_fine_eyes",
+    "model": "GigaChat-2",
+    "seconds": 15.053,
+    "fallback": false,
+    "reason": null,
+    "image": "06_fine_eyes_GigaChat-2.jpg"
+  },
+  {
+    "scene": "06_fine_eyes",
+    "model": "GigaChat-2-Max",
+    "seconds": 22.642,
+    "fallback": false,
+    "reason": null,
+    "image": "06_fine_eyes_GigaChat-2-Max.jpg"
+  },
+  {
+    "scene": "09_humbug",
+    "model": "GigaChat-2",
+    "seconds": 21.143,
+    "fallback": false,
+    "reason": null,
+    "image": "09_humbug_GigaChat-2.jpg"
+  },
+  {
+    "scene": "09_humbug",
+    "model": "GigaChat-2-Max",
+    "seconds": 22.62,
+    "fallback": false,
+    "reason": null,
+    "image": "09_humbug_GigaChat-2-Max.jpg"
+  },
+  {
+    "scene": "09_humbug",
+    "model": "GigaChat-2-Pro",
+    "seconds": 40.019,
+    "fallback": true,
+    "reason": "timeout",
+    "image": null
+  }
+]

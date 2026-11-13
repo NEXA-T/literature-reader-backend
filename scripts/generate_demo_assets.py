@@ -27,11 +27,11 @@ async def main():
     args = parser.parse_args()
     scenes = json.loads((ROOT / "docs/demo-assets/scenes.json").read_text(encoding="utf-8"))
     settings = GigaChatSettings.from_env_file(args.env_file)
-    settings.model = "GigaChat-2-Max"
+    settings.image_model = "GigaChat-2-Max"
     provider = GigaChatImageProvider(settings)
     args.output_dir.mkdir(parents=True, exist_ok=True)
     record = {"started_at_utc": datetime.now(timezone.utc).isoformat(),
-              "provider": provider.name, "model_requested": settings.model,
+              "provider": provider.name, "model_requested": provider.model,
               "poll_interval_seconds": 1.5, "interactive_client_max_wait_seconds": 15,
               "max_wait_per_attempt_seconds": 90 if args.offline_assets else 15,
               "mode": "offline_asset_preparation" if args.offline_assets else "interactive_client",
@@ -42,7 +42,7 @@ async def main():
         previous = args.output_dir / "generation-log.json"
         if previous.exists():
             record["cases"] = json.loads(previous.read_text(encoding="utf-8"))["cases"]
-    async with ImageGenerationClient(provider) as client:
+    async with ImageGenerationClient(provider, max_wait=15) as client:
         for scene in scenes:
             if args.case_id and scene["id"] not in args.case_id:
                 continue
