@@ -32,7 +32,7 @@ timeout /t 10 /nobreak >nul
 
 REM 3. Запуск ngrok в отдельном окне
 echo [3/3] Запускаю ngrok-туннель...
-start "ngrok tunnel" cmd /c "ngrok http 8000"
+start "ngrok tunnel" cmd /c "ngrok http --url=john-fiber-reuse.ngrok-free.dev 8000"
 
 REM 4. Ждём, пока ngrok поднимется, и достаём URL из его локального API
 echo Ожидаю ngrok API...
